@@ -1,0 +1,10 @@
+C:\Users\hp\Documents\Visual Studio 2012\Projects\WindowsApplication1\WindowsApplication1\bin\Debug\SIESAPP.exe.config
+C:\Users\hp\Documents\Visual Studio 2012\Projects\WindowsApplication1\WindowsApplication1\bin\Debug\SIESAPP.exe
+C:\Users\hp\Documents\Visual Studio 2012\Projects\WindowsApplication1\WindowsApplication1\bin\Debug\SIESAPP.pdb
+C:\Users\hp\Documents\Visual Studio 2012\Projects\WindowsApplication1\WindowsApplication1\bin\Debug\SIESAPP.xml
+C:\Users\hp\Documents\Visual Studio 2012\Projects\WindowsApplication1\WindowsApplication1\obj\Debug\SIESAPP.Form1.resources
+C:\Users\hp\Documents\Visual Studio 2012\Projects\WindowsApplication1\WindowsApplication1\obj\Debug\SIESAPP.Resources.resources
+C:\Users\hp\Documents\Visual Studio 2012\Projects\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.vbproj.GenerateResource.Cache
+C:\Users\hp\Documents\Visual Studio 2012\Projects\WindowsApplication1\WindowsApplication1\obj\Debug\SIESAPP.exe
+C:\Users\hp\Documents\Visual Studio 2012\Projects\WindowsApplication1\WindowsApplication1\obj\Debug\SIESAPP.xml
+C:\Users\hp\Documents\Visual Studio 2012\Projects\WindowsApplication1\WindowsApplication1\obj\Debug\SIESAPP.pdb
