@@ -1,1 +1,1 @@
-my 1st project
+I merged my inventory project with an existing .net repository online
