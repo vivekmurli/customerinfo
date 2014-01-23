@@ -32,30 +32,15 @@ namespace LINQExample
                 Console.WriteLine("Id\tCity\tState");
                 foreach (var row in querySelect)
                 {
-                    Console.WriteLine("{0}\t{1}\t{2}", row.city_id, row.city_name, row.city_state);
+                    Console.WriteLine("{0}\t\t{1}\t\t{2}", row.city_id, row.city_name, row.city_state);
                 }
             }
         }
 
-        public void insertPerson()
-        {
-             using (var db=new ThermoEntities())
-             {
-                 Person p=new Person();
-                 Console.WriteLine("Enter Name :");
-                 p.person_name=Console.ReadLine();
-                 p.city_id=Convert.ToInt64(Console.ReadLine());
-                 db.People.Add(p);
-                 db.SaveChanges();
-                 displayCity();
-
-             }
-        }
-      
         static void Main(string[] args)
         {
             Program t = new Program();
-            t.insertPerson();
+            t.insertCity();
             Console.Read();
         }
     }
