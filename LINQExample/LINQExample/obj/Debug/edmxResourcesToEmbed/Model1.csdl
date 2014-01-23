@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ThermoModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="ThermoEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="Cities" EntityType="ThermoModel.City" />
+    <EntitySet Name="People" EntityType="ThermoModel.Person" />
+    <AssociationSet Name="FK_Person_0_0" Association="ThermoModel.FK_Person_0_0">
+      <End Role="City" EntitySet="Cities" />
+      <End Role="Person" EntitySet="People" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="City">
+    <Key>
+      <PropertyRef Name="city_id" />
+    </Key>
+    <Property Name="city_id" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="city_name" Type="String" MaxLength="2147483647" Unicode="false" FixedLength="false" />
+    <Property Name="city_state" Type="String" MaxLength="2147483647" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="People" Relationship="ThermoModel.FK_Person_0_0" FromRole="City" ToRole="Person" />
+  </EntityType>
+  <EntityType Name="Person">
+    <Key>
+      <PropertyRef Name="person_id" />
+    </Key>
+    <Property Name="person_id" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="person_name" Type="String" MaxLength="2147483647" Unicode="false" FixedLength="false" />
+    <Property Name="city_id" Type="Int64" />
+    <NavigationProperty Name="City" Relationship="ThermoModel.FK_Person_0_0" FromRole="Person" ToRole="City" />
+  </EntityType>
+  <Association Name="FK_Person_0_0">
+    <End Role="City" Type="ThermoModel.City" Multiplicity="0..1" />
+    <End Role="Person" Type="ThermoModel.Person" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="City">
+        <PropertyRef Name="city_id" />
+      </Principal>
+      <Dependent Role="Person">
+        <PropertyRef Name="city_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

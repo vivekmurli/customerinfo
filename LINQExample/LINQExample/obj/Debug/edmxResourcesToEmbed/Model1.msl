@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ThermoModelStoreContainer" CdmEntityContainer="ThermoEntities">
+    <EntitySetMapping Name="Cities">
+      <EntityTypeMapping TypeName="ThermoModel.City">
+        <MappingFragment StoreEntitySet="City">
+          <ScalarProperty Name="city_id" ColumnName="city_id" />
+          <ScalarProperty Name="city_name" ColumnName="city_name" />
+          <ScalarProperty Name="city_state" ColumnName="city_state" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="People">
+      <EntityTypeMapping TypeName="ThermoModel.Person">
+        <MappingFragment StoreEntitySet="Person">
+          <ScalarProperty Name="person_id" ColumnName="person_id" />
+          <ScalarProperty Name="person_name" ColumnName="person_name" />
+          <ScalarProperty Name="city_id" ColumnName="city_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

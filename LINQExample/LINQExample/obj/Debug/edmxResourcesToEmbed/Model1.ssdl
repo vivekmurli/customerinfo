@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ThermoModel.Store" Alias="Self" Provider="System.Data.SQLite" ProviderManifestToken="ISO8601" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="ThermoModelStoreContainer">
+    <EntitySet Name="City" EntityType="ThermoModel.Store.City" store:Type="Tables" />
+    <EntitySet Name="Person" EntityType="ThermoModel.Store.Person" store:Type="Tables" />
+    <AssociationSet Name="FK_Person_0_0" Association="ThermoModel.Store.FK_Person_0_0">
+      <End Role="City" EntitySet="City" />
+      <End Role="Person" EntitySet="Person" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="City">
+    <Key>
+      <PropertyRef Name="city_id" />
+    </Key>
+    <Property Name="city_id" Type="integer" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="city_name" Type="varchar" />
+    <Property Name="city_state" Type="varchar" />
+  </EntityType>
+  <EntityType Name="Person">
+    <Key>
+      <PropertyRef Name="person_id" />
+    </Key>
+    <Property Name="person_id" Type="integer" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="person_name" Type="varchar" />
+    <Property Name="city_id" Type="integer" />
+  </EntityType>
+  <Association Name="FK_Person_0_0">
+    <End Role="City" Type="ThermoModel.Store.City" Multiplicity="0..1" />
+    <End Role="Person" Type="ThermoModel.Store.Person" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="City">
+        <PropertyRef Name="city_id" />
+      </Principal>
+      <Dependent Role="Person">
+        <PropertyRef Name="city_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
