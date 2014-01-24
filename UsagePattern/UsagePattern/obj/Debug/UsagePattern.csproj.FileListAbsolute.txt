@@ -1,0 +1,10 @@
+c:\users\manu\documents\visual studio 2012\Projects\UsagePattern\UsagePattern\obj\Debug\UsagePattern.csprojResolveAssemblyReference.cache
+c:\users\manu\documents\visual studio 2012\Projects\UsagePattern\UsagePattern\bin\Debug\x64\SQLite.Interop.dll
+c:\users\manu\documents\visual studio 2012\Projects\UsagePattern\UsagePattern\bin\Debug\x86\SQLite.Interop.dll
+c:\users\manu\documents\visual studio 2012\Projects\UsagePattern\UsagePattern\bin\Debug\UsagePattern.exe
+c:\users\manu\documents\visual studio 2012\Projects\UsagePattern\UsagePattern\bin\Debug\UsagePattern.pdb
+c:\users\manu\documents\visual studio 2012\Projects\UsagePattern\UsagePattern\bin\Debug\System.Data.SQLite.dll
+c:\users\manu\documents\visual studio 2012\Projects\UsagePattern\UsagePattern\bin\Debug\System.Data.SQLite.Linq.dll
+c:\users\manu\documents\visual studio 2012\Projects\UsagePattern\UsagePattern\bin\Debug\System.Data.SQLite.xml
+c:\users\manu\documents\visual studio 2012\Projects\UsagePattern\UsagePattern\obj\Debug\UsagePattern.exe
+c:\users\manu\documents\visual studio 2012\Projects\UsagePattern\UsagePattern\obj\Debug\UsagePattern.pdb
