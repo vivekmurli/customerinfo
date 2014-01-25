@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ThermoModel.Store" Alias="Self" Provider="System.Data.SQLite" ProviderManifestToken="ISO8601" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="ThermoModelStoreContainer">
+          <EntitySet Name="City" EntityType="ThermoModel.Store.City" store:Type="Tables" />
+          <EntitySet Name="Person" EntityType="ThermoModel.Store.Person" store:Type="Tables" />
+          <AssociationSet Name="FK_Person_0_0" Association="ThermoModel.Store.FK_Person_0_0">
+            <End Role="City" EntitySet="City" />
+            <End Role="Person" EntitySet="Person" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="City">
+          <Key>
+            <PropertyRef Name="city_id" />
+          </Key>
+          <Property Name="city_id" Type="integer" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="city_name" Type="varchar" />
+          <Property Name="city_state" Type="varchar" />
+        </EntityType>
+        <EntityType Name="Person">
+          <Key>
+            <PropertyRef Name="person_id" />
+          </Key>
+          <Property Name="person_id" Type="integer" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="person_name" Type="varchar" />
+          <Property Name="city_id" Type="integer" />
+        </EntityType>
+        <Association Name="FK_Person_0_0">
+          <End Role="City" Type="ThermoModel.Store.City" Multiplicity="0..1" />
+          <End Role="Person" Type="ThermoModel.Store.Person" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="City">
+              <PropertyRef Name="city_id" />
+            </Principal>
+            <Dependent Role="Person">
+              <PropertyRef Name="city_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ThermoModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="ThermoEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="Cities" EntityType="ThermoModel.City" />
+          <EntitySet Name="People" EntityType="ThermoModel.Person" />
+          <AssociationSet Name="FK_Person_0_0" Association="ThermoModel.FK_Person_0_0">
+            <End Role="City" EntitySet="Cities" />
+            <End Role="Person" EntitySet="People" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="City">
+          <Key>
+            <PropertyRef Name="city_id" />
+          </Key>
+          <Property Name="city_id" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="city_name" Type="String" MaxLength="2147483647" Unicode="false" FixedLength="false" />
+          <Property Name="city_state" Type="String" MaxLength="2147483647" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="People" Relationship="ThermoModel.FK_Person_0_0" FromRole="City" ToRole="Person" />
+        </EntityType>
+        <EntityType Name="Person">
+          <Key>
+            <PropertyRef Name="person_id" />
+          </Key>
+          <Property Name="person_id" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="person_name" Type="String" MaxLength="2147483647" Unicode="false" FixedLength="false" />
+          <Property Name="city_id" Type="Int64" />
+          <NavigationProperty Name="City" Relationship="ThermoModel.FK_Person_0_0" FromRole="Person" ToRole="City" />
+        </EntityType>
+        <Association Name="FK_Person_0_0">
+          <End Role="City" Type="ThermoModel.City" Multiplicity="0..1" />
+          <End Role="Person" Type="ThermoModel.Person" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="City">
+              <PropertyRef Name="city_id" />
+            </Principal>
+            <Dependent Role="Person">
+              <PropertyRef Name="city_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ThermoModelStoreContainer" CdmEntityContainer="ThermoEntities">
+          <EntitySetMapping Name="Cities">
+            <EntityTypeMapping TypeName="ThermoModel.City">
+              <MappingFragment StoreEntitySet="City">
+                <ScalarProperty Name="city_id" ColumnName="city_id" />
+                <ScalarProperty Name="city_name" ColumnName="city_name" />
+                <ScalarProperty Name="city_state" ColumnName="city_state" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="People">
+            <EntityTypeMapping TypeName="ThermoModel.Person">
+              <MappingFragment StoreEntitySet="Person">
+                <ScalarProperty Name="person_id" ColumnName="person_id" />
+                <ScalarProperty Name="person_name" ColumnName="person_name" />
+                <ScalarProperty Name="city_id" ColumnName="city_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
