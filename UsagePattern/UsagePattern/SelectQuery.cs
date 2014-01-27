@@ -14,7 +14,7 @@ namespace UsagePattern
             String a = "January";
             try
             {
-               String query = "SELECT  water_usage.person_id, person.person_name, sum(water_usage.w_usage) usage, month.name month, month.year FROM person JOIN water_usage ON person.person_id = water_usage.person_id JOIN month ON water_usage.month_id = month.month_id GROUP BY water_usage.person_id, water_usage.month_id HAVING (month.name = '"+a+"' AND month.year=2012 AND sum(water_usage.w_usage) > 200)";
+               String query = "SELECT  water_usage.person_id, person.person_name, sum(water_usage.usage) usage, month.month_name month, month.year FROM person JOIN water_usage ON person.person_id = water_usage.person_id JOIN month ON water_usage.month_id = month.month_id GROUP BY water_usage.person_id, water_usage.month_id HAVING (month.month_name = '"+a+"' AND month.year=2012 AND sum(water_usage.usage) > 150)";
 
                DataDao.sqlite_cmd.CommandText = query;
             }
