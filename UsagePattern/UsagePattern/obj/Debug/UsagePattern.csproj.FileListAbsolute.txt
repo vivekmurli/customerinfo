@@ -8,3 +8,13 @@ c:\users\manu\documents\visual studio 2012\Projects\UsagePattern\UsagePattern\bi
 c:\users\manu\documents\visual studio 2012\Projects\UsagePattern\UsagePattern\bin\Debug\System.Data.SQLite.xml
 c:\users\manu\documents\visual studio 2012\Projects\UsagePattern\UsagePattern\obj\Debug\UsagePattern.exe
 c:\users\manu\documents\visual studio 2012\Projects\UsagePattern\UsagePattern\obj\Debug\UsagePattern.pdb
+C:\Users\manu\Documents\GitHub\customerinfo\UsagePattern\UsagePattern\obj\Debug\UsagePattern.exe
+C:\Users\manu\Documents\GitHub\customerinfo\UsagePattern\UsagePattern\obj\Debug\UsagePattern.pdb
+C:\Users\manu\Documents\GitHub\customerinfo\UsagePattern\UsagePattern\bin\Debug\x64\SQLite.Interop.dll
+C:\Users\manu\Documents\GitHub\customerinfo\UsagePattern\UsagePattern\bin\Debug\x86\SQLite.Interop.dll
+C:\Users\manu\Documents\GitHub\customerinfo\UsagePattern\UsagePattern\bin\Debug\UsagePattern.exe
+C:\Users\manu\Documents\GitHub\customerinfo\UsagePattern\UsagePattern\bin\Debug\UsagePattern.pdb
+C:\Users\manu\Documents\GitHub\customerinfo\UsagePattern\UsagePattern\bin\Debug\System.Data.SQLite.dll
+C:\Users\manu\Documents\GitHub\customerinfo\UsagePattern\UsagePattern\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\manu\Documents\GitHub\customerinfo\UsagePattern\UsagePattern\bin\Debug\System.Data.SQLite.xml
+C:\Users\manu\Documents\GitHub\customerinfo\UsagePattern\UsagePattern\obj\Debug\UsagePattern.csprojResolveAssemblyReference.cache
