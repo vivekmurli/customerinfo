@@ -20,7 +20,7 @@ namespace UsagePattern
         
         SQLiteParameter p1,p2,p3,p4;
 
-        String[] month ={"January", "February", "March", "April","May","June","July","Auugust","September","October","November","December"};
+        String[] month ={"January", "February", "March", "April","May","June","July","August","September","October","November","December"};
         String[] city_name={"Vashi","Sanpada","Nerul"};
         String[] state = { "Maharashtra" };
 

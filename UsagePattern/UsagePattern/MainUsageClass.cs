@@ -10,28 +10,28 @@ namespace UsagePattern
         static void Main(string[] args)
         {
             DataDao datadao = new DataDao();
-            datadao.createDataBase();
+            //datadao.createDataBase();
             datadao.connection();
             datadao.openConnection();
 
-            CreateTable createtable = new CreateTable();
-            createtable.table();
-            createtable.executeTable();
+            //CreateTable createtable = new CreateTable();
+            //createtable.table();
+            //createtable.executeTable();
 
-            InsertQuery insertQuery = new InsertQuery();
+            //InsertQuery insertQuery = new InsertQuery();
             
-            datadao.beginTransaction();
-            insertQuery.insertCity();
-            insertQuery.insertmonth();
-            insertQuery.insertWaterUsage();
-            insertQuery.insertElectricityUsage();
+            //datadao.beginTransaction();
+            //insertQuery.insertCity();
+            //insertQuery.insertmonth();
+            //insertQuery.insertWaterUsage();
+            //insertQuery.insertElectricityUsage();
            
-            datadao.commitTransaction();
+            //datadao.commitTransaction();
             
-            //SelectQuery selectquery = new SelectQuery();
-            //selectquery.select();
+            SelectQuery selectquery = new SelectQuery();
+            selectquery.select();
 
-            //datadao.reader();
+            datadao.reader();
 
             datadao.closeConnection();
         }

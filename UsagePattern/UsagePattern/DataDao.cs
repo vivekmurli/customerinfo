@@ -21,7 +21,7 @@ namespace UsagePattern
         
         public void connection()
         {
-        sqlite_conn = new SQLiteConnection("Data Source=C:\\Users\\manu\\Desktop\\Folders\\internship\\DemoUsagePatterns.sqlite");
+        sqlite_conn = new SQLiteConnection("Data Source=C:\\Users\\manu\\Documents\\GitHub\\customerinfo\\UsagePattern\\DemoUsagePatterns.sqlite");
         sqlite_cmd = sqlite_conn.CreateCommand();
         }
 
