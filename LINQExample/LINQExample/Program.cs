@@ -8,7 +8,7 @@ namespace LINQExample
 {
     class Program
     {
-        public void insertCity()
+       /* public void insertCity()
         {
             using (ThermoEntities db = new ThermoEntities())
             {
@@ -35,12 +35,18 @@ namespace LINQExample
                     Console.WriteLine("{0}\t\t{1}\t\t{2}", row.city_id, row.city_name, row.city_state);
                 }
             }
-        }
+        }*/
 
         static void Main(string[] args)
         {
-            Program t = new Program();
-            t.insertCity();
+            //-----------Simple Insert and Select query-----------
+           // Program t = new Program();
+           // t.insertCity();
+
+            //------------Select Query for Usage > 200-------------
+            SelectQuery s = new SelectQuery();
+            s.waterUsage();
+
             Console.Read();
         }
     }

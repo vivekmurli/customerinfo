@@ -12,17 +12,19 @@ namespace LINQExample
     using System;
     using System.Collections.Generic;
     
-    public partial class city
+    public partial class month
     {
-        public city()
+        public month()
         {
-            this.people = new HashSet<person>();
+            this.electricity_usage = new HashSet<electricity_usage>();
+            this.water_usage = new HashSet<water_usage>();
         }
     
-        public long city_id { get; set; }
-        public string city_name { get; set; }
-        public string state { get; set; }
+        public long month_id { get; set; }
+        public string name { get; set; }
+        public long year { get; set; }
     
-        public virtual ICollection<person> people { get; set; }
+        public virtual ICollection<electricity_usage> electricity_usage { get; set; }
+        public virtual ICollection<water_usage> water_usage { get; set; }
     }
 }
