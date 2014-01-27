@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="UsagePatternsModel.Store" Alias="Self" Provider="System.Data.SQLite" ProviderManifestToken="ISO8601" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="UsagePatternsModelStoreContainer">
+    <EntitySet Name="city" EntityType="UsagePatternsModel.Store.city" store:Type="Tables" />
+    <EntitySet Name="electricity_usage" EntityType="UsagePatternsModel.Store.electricity_usage" store:Type="Tables" store:Name="electricity_usage">
+      <DefiningQuery>SELECT 
+      [electricity_usage].[person_id] AS [person_id], 
+      [electricity_usage].[day] AS [day], 
+      [electricity_usage].[month_id] AS [month_id], 
+      [electricity_usage].[e_usage] AS [e_usage]
+      FROM [electricity_usage] AS [electricity_usage]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="month" EntityType="UsagePatternsModel.Store.month" store:Type="Tables" />
+    <EntitySet Name="person" EntityType="UsagePatternsModel.Store.person" store:Type="Tables" />
+    <EntitySet Name="water_usage" EntityType="UsagePatternsModel.Store.water_usage" store:Type="Tables" store:Name="water_usage">
+      <DefiningQuery>SELECT 
+      [water_usage].[person_id] AS [person_id], 
+      [water_usage].[day] AS [day], 
+      [water_usage].[month_id] AS [month_id], 
+      [water_usage].[w_usage] AS [w_usage]
+      FROM [water_usage] AS [water_usage]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_electricity_usage_0_0" Association="UsagePatternsModel.Store.FK_electricity_usage_0_0">
+      <End Role="month" EntitySet="month" />
+      <End Role="electricity_usage" EntitySet="electricity_usage" />
+    </AssociationSet>
+    <AssociationSet Name="FK_electricity_usage_1_0" Association="UsagePatternsModel.Store.FK_electricity_usage_1_0">
+      <End Role="person" EntitySet="person" />
+      <End Role="electricity_usage" EntitySet="electricity_usage" />
+    </AssociationSet>
+    <AssociationSet Name="FK_person_0_0" Association="UsagePatternsModel.Store.FK_person_0_0">
+      <End Role="city" EntitySet="city" />
+      <End Role="person" EntitySet="person" />
+    </AssociationSet>
+    <AssociationSet Name="FK_water_usage_0_0" Association="UsagePatternsModel.Store.FK_water_usage_0_0">
+      <End Role="month" EntitySet="month" />
+      <End Role="water_usage" EntitySet="water_usage" />
+    </AssociationSet>
+    <AssociationSet Name="FK_water_usage_1_0" Association="UsagePatternsModel.Store.FK_water_usage_1_0">
+      <End Role="person" EntitySet="person" />
+      <End Role="water_usage" EntitySet="water_usage" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="city">
+    <Key>
+      <PropertyRef Name="city_id" />
+    </Key>
+    <Property Name="city_id" Type="integer" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="city_name" Type="varchar" Nullable="false" />
+    <Property Name="state" Type="varchar" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'main.electricity_usage' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="electricity_usage">
+    <Key>
+      <PropertyRef Name="person_id" />
+      <PropertyRef Name="day" />
+      <PropertyRef Name="month_id" />
+      <PropertyRef Name="e_usage" />
+    </Key>
+    <Property Name="person_id" Type="integer" Nullable="false" />
+    <Property Name="day" Type="integer" Nullable="false" />
+    <Property Name="month_id" Type="integer" Nullable="false" />
+    <Property Name="e_usage" Type="integer" Nullable="false" />
+  </EntityType>
+  <EntityType Name="month">
+    <Key>
+      <PropertyRef Name="month_id" />
+    </Key>
+    <Property Name="month_id" Type="integer" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="varchar" Nullable="false" />
+    <Property Name="year" Type="integer" Nullable="false" />
+  </EntityType>
+  <EntityType Name="person">
+    <Key>
+      <PropertyRef Name="person_id" />
+    </Key>
+    <Property Name="person_id" Type="integer" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="person_name" Type="varchar" />
+    <Property Name="city_id" Type="integer" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'main.water_usage' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="water_usage">
+    <Key>
+      <PropertyRef Name="person_id" />
+      <PropertyRef Name="day" />
+      <PropertyRef Name="month_id" />
+      <PropertyRef Name="w_usage" />
+    </Key>
+    <Property Name="person_id" Type="integer" Nullable="false" />
+    <Property Name="day" Type="integer" Nullable="false" />
+    <Property Name="month_id" Type="integer" Nullable="false" />
+    <Property Name="w_usage" Type="integer" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_electricity_usage_0_0">
+    <End Role="month" Type="UsagePatternsModel.Store.month" Multiplicity="1" />
+    <End Role="electricity_usage" Type="UsagePatternsModel.Store.electricity_usage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="month">
+        <PropertyRef Name="month_id" />
+      </Principal>
+      <Dependent Role="electricity_usage">
+        <PropertyRef Name="month_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_electricity_usage_1_0">
+    <End Role="person" Type="UsagePatternsModel.Store.person" Multiplicity="1" />
+    <End Role="electricity_usage" Type="UsagePatternsModel.Store.electricity_usage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="person">
+        <PropertyRef Name="person_id" />
+      </Principal>
+      <Dependent Role="electricity_usage">
+        <PropertyRef Name="person_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_person_0_0">
+    <End Role="city" Type="UsagePatternsModel.Store.city" Multiplicity="0..1" />
+    <End Role="person" Type="UsagePatternsModel.Store.person" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="city">
+        <PropertyRef Name="city_id" />
+      </Principal>
+      <Dependent Role="person">
+        <PropertyRef Name="city_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_water_usage_0_0">
+    <End Role="month" Type="UsagePatternsModel.Store.month" Multiplicity="1" />
+    <End Role="water_usage" Type="UsagePatternsModel.Store.water_usage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="month">
+        <PropertyRef Name="month_id" />
+      </Principal>
+      <Dependent Role="water_usage">
+        <PropertyRef Name="month_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_water_usage_1_0">
+    <End Role="person" Type="UsagePatternsModel.Store.person" Multiplicity="1" />
+    <End Role="water_usage" Type="UsagePatternsModel.Store.water_usage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="person">
+        <PropertyRef Name="person_id" />
+      </Principal>
+      <Dependent Role="water_usage">
+        <PropertyRef Name="person_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

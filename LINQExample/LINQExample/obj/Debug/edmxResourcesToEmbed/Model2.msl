@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="UsagePatternsModelStoreContainer" CdmEntityContainer="UsagePatternsEntities">
+    <EntitySetMapping Name="cities">
+      <EntityTypeMapping TypeName="UsagePatternsModel.city">
+        <MappingFragment StoreEntitySet="city">
+          <ScalarProperty Name="city_id" ColumnName="city_id" />
+          <ScalarProperty Name="city_name" ColumnName="city_name" />
+          <ScalarProperty Name="state" ColumnName="state" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="electricity_usage">
+      <EntityTypeMapping TypeName="UsagePatternsModel.electricity_usage">
+        <MappingFragment StoreEntitySet="electricity_usage">
+          <ScalarProperty Name="person_id" ColumnName="person_id" />
+          <ScalarProperty Name="day" ColumnName="day" />
+          <ScalarProperty Name="month_id" ColumnName="month_id" />
+          <ScalarProperty Name="e_usage" ColumnName="e_usage" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="months">
+      <EntityTypeMapping TypeName="UsagePatternsModel.month">
+        <MappingFragment StoreEntitySet="month">
+          <ScalarProperty Name="month_id" ColumnName="month_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="year" ColumnName="year" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="people">
+      <EntityTypeMapping TypeName="UsagePatternsModel.person">
+        <MappingFragment StoreEntitySet="person">
+          <ScalarProperty Name="person_id" ColumnName="person_id" />
+          <ScalarProperty Name="person_name" ColumnName="person_name" />
+          <ScalarProperty Name="city_id" ColumnName="city_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="water_usage">
+      <EntityTypeMapping TypeName="UsagePatternsModel.water_usage">
+        <MappingFragment StoreEntitySet="water_usage">
+          <ScalarProperty Name="person_id" ColumnName="person_id" />
+          <ScalarProperty Name="day" ColumnName="day" />
+          <ScalarProperty Name="month_id" ColumnName="month_id" />
+          <ScalarProperty Name="w_usage" ColumnName="w_usage" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

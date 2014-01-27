@@ -12,12 +12,20 @@ namespace LINQExample
     using System;
     using System.Collections.Generic;
     
-    public partial class Person
+    public partial class person
     {
+        public person()
+        {
+            this.electricity_usage = new HashSet<electricity_usage>();
+            this.water_usage = new HashSet<water_usage>();
+        }
+    
         public long person_id { get; set; }
         public string person_name { get; set; }
         public Nullable<long> city_id { get; set; }
     
-        public virtual City City { get; set; }
+        public virtual city city { get; set; }
+        public virtual ICollection<electricity_usage> electricity_usage { get; set; }
+        public virtual ICollection<water_usage> water_usage { get; set; }
     }
 }

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e115e339178e42dfa006f5afccff7034" Name="Diagram1">
+        <EntityTypeShape EntityType="UsagePatternsModel.city" Width="1.5" PointX="0.75" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="UsagePatternsModel.electricity_usage" Width="1.5" PointX="5.25" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UsagePatternsModel.month" Width="1.5" PointX="3" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="UsagePatternsModel.person" Width="1.5" PointX="3" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UsagePatternsModel.water_usage" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="UsagePatternsModel.FK_person_0_0" ManuallyRouted="false" />
+        <AssociationConnector Association="UsagePatternsModel.FK_electricity_usage_0_0" ManuallyRouted="false" />
+        <AssociationConnector Association="UsagePatternsModel.FK_electricity_usage_1_0" ManuallyRouted="false" />
+        <AssociationConnector Association="UsagePatternsModel.FK_water_usage_0_0" ManuallyRouted="false" />
+        <AssociationConnector Association="UsagePatternsModel.FK_water_usage_1_0" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
