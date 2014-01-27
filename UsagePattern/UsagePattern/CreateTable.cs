@@ -38,7 +38,7 @@ namespace UsagePattern
                                   [person_id] integer not null,
                                   [day] integer not null,
                                   [month_id] integer not null,
-                                  [w_usage] integer not null,
+                                  [usage] integer not null,
                                   foreign key(person_id) references person(person_id),
                                   foreign key(month_id) references month(month_id)
                                   )";
@@ -47,7 +47,7 @@ namespace UsagePattern
                                   [person_id] integer not null,
                                   [day] integer not null,
                                   [month_id] integer not null,
-                                  [e_usage] integer not null,
+                                  [usage] integer not null,
                                   foreign key(person_id) references person(person_id),
                                   foreign key(month_id) references month(month_id)
                                   )";
