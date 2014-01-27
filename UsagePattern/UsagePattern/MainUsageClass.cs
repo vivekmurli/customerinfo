@@ -19,11 +19,19 @@ namespace UsagePattern
             createtable.executeTable();
 
             InsertQuery insertQuery = new InsertQuery();
+            
             datadao.beginTransaction();
-            //insertQuery.insertCity();
-            //insertQuery.insertWaterUsage();
+            insertQuery.insertCity();
+            insertQuery.insertmonth();
+            insertQuery.insertWaterUsage();
             insertQuery.insertElectricityUsage();
+           
             datadao.commitTransaction();
+            
+            //SelectQuery selectquery = new SelectQuery();
+            //selectquery.select();
+
+            //datadao.reader();
 
             datadao.closeConnection();
         }

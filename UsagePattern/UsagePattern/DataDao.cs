@@ -21,7 +21,7 @@ namespace UsagePattern
         
         public void connection()
         {
-        sqlite_conn = new SQLiteConnection("Data Source=C:\\Users\\manu\\Desktop\\Folders\\internship\\DemoUsagePattern.sqlite");
+        sqlite_conn = new SQLiteConnection("Data Source=C:\\Users\\manu\\Desktop\\Folders\\internship\\DemoUsagePatterns.sqlite");
         sqlite_cmd = sqlite_conn.CreateCommand();
         }
 
@@ -40,6 +40,25 @@ namespace UsagePattern
         {
             sqlite_tran.Commit();
         }
+
+        public void reader()
+        {
+            try
+            {
+                SQLiteDataReader reader = sqlite_cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    Console.WriteLine(reader.GetInt32(0) + " " + reader.GetString(1)+" " + reader.GetInt32(2) + " " + reader.GetString(3)+" "+ reader.GetInt32(4));
+
+                }
+                Console.Read();
+            }
+            catch (SQLiteException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+        }
+
 
         public void closeConnection()
         {
