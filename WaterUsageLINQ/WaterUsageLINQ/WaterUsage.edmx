@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="WaterUsageModel.Store" Alias="Self" Provider="System.Data.SQLite" ProviderManifestToken="ISO8601" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="WaterUsageModelStoreContainer">
+          <EntitySet Name="month" EntityType="WaterUsageModel.Store.month" store:Type="Tables" />
+          <EntitySet Name="Person" EntityType="WaterUsageModel.Store.Person" store:Type="Tables" />
+          <EntitySet Name="wusage" EntityType="WaterUsageModel.Store.wusage" store:Type="Tables" />
+          <AssociationSet Name="FK_wusage_0_0" Association="WaterUsageModel.Store.FK_wusage_0_0">
+            <End Role="month" EntitySet="month" />
+            <End Role="wusage" EntitySet="wusage" />
+          </AssociationSet>
+          <AssociationSet Name="FK_wusage_1_0" Association="WaterUsageModel.Store.FK_wusage_1_0">
+            <End Role="Person" EntitySet="Person" />
+            <End Role="wusage" EntitySet="wusage" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="month">
+          <Key>
+            <PropertyRef Name="month_id" />
+          </Key>
+          <Property Name="month_id" Type="integer" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="mname" Type="nvarchar" />
+          <Property Name="year" Type="integer" />
+        </EntityType>
+        <EntityType Name="Person">
+          <Key>
+            <PropertyRef Name="person_id" />
+          </Key>
+          <Property Name="person_id" Type="integer" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="pname" Type="nvarchar" />
+        </EntityType>
+        <EntityType Name="wusage">
+          <Key>
+            <PropertyRef Name="wid" />
+          </Key>
+          <Property Name="person_id" Type="integer" Nullable="false" />
+          <Property Name="wid" Type="integer" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="day" Type="integer" />
+          <Property Name="month_id" Type="integer" Nullable="false" />
+          <Property Name="w_usage" Type="integer" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_wusage_0_0">
+          <End Role="month" Type="WaterUsageModel.Store.month" Multiplicity="1" />
+          <End Role="wusage" Type="WaterUsageModel.Store.wusage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="month">
+              <PropertyRef Name="month_id" />
+            </Principal>
+            <Dependent Role="wusage">
+              <PropertyRef Name="month_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_wusage_1_0">
+          <End Role="Person" Type="WaterUsageModel.Store.Person" Multiplicity="1" />
+          <End Role="wusage" Type="WaterUsageModel.Store.wusage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Person">
+              <PropertyRef Name="person_id" />
+            </Principal>
+            <Dependent Role="wusage">
+              <PropertyRef Name="person_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="WaterUsageModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="WaterUsageEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="months" EntityType="WaterUsageModel.month" />
+          <EntitySet Name="People" EntityType="WaterUsageModel.Person" />
+          <EntitySet Name="wusages" EntityType="WaterUsageModel.wusage" />
+          <AssociationSet Name="FK_wusage_0_0" Association="WaterUsageModel.FK_wusage_0_0">
+            <End Role="month" EntitySet="months" />
+            <End Role="wusage" EntitySet="wusages" />
+          </AssociationSet>
+          <AssociationSet Name="FK_wusage_1_0" Association="WaterUsageModel.FK_wusage_1_0">
+            <End Role="Person" EntitySet="People" />
+            <End Role="wusage" EntitySet="wusages" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="month">
+          <Key>
+            <PropertyRef Name="month_id" />
+          </Key>
+          <Property Name="month_id" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="mname" Type="String" MaxLength="2147483647" Unicode="true" FixedLength="false" />
+          <Property Name="year" Type="Int64" />
+          <NavigationProperty Name="wusages" Relationship="WaterUsageModel.FK_wusage_0_0" FromRole="month" ToRole="wusage" />
+        </EntityType>
+        <EntityType Name="Person">
+          <Key>
+            <PropertyRef Name="person_id" />
+          </Key>
+          <Property Name="person_id" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="pname" Type="String" MaxLength="2147483647" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="wusages" Relationship="WaterUsageModel.FK_wusage_1_0" FromRole="Person" ToRole="wusage" />
+        </EntityType>
+        <EntityType Name="wusage">
+          <Key>
+            <PropertyRef Name="wid" />
+          </Key>
+          <Property Name="person_id" Type="Int64" Nullable="false" />
+          <Property Name="wid" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="day" Type="Int64" />
+          <Property Name="month_id" Type="Int64" Nullable="false" />
+          <Property Name="w_usage" Type="Int64" Nullable="false" />
+          <NavigationProperty Name="month" Relationship="WaterUsageModel.FK_wusage_0_0" FromRole="wusage" ToRole="month" />
+          <NavigationProperty Name="Person" Relationship="WaterUsageModel.FK_wusage_1_0" FromRole="wusage" ToRole="Person" />
+        </EntityType>
+        <Association Name="FK_wusage_0_0">
+          <End Role="month" Type="WaterUsageModel.month" Multiplicity="1" />
+          <End Role="wusage" Type="WaterUsageModel.wusage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="month">
+              <PropertyRef Name="month_id" />
+            </Principal>
+            <Dependent Role="wusage">
+              <PropertyRef Name="month_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_wusage_1_0">
+          <End Role="Person" Type="WaterUsageModel.Person" Multiplicity="1" />
+          <End Role="wusage" Type="WaterUsageModel.wusage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Person">
+              <PropertyRef Name="person_id" />
+            </Principal>
+            <Dependent Role="wusage">
+              <PropertyRef Name="person_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="WaterUsageModelStoreContainer" CdmEntityContainer="WaterUsageEntities">
+          <EntitySetMapping Name="months">
+            <EntityTypeMapping TypeName="WaterUsageModel.month">
+              <MappingFragment StoreEntitySet="month">
+                <ScalarProperty Name="month_id" ColumnName="month_id" />
+                <ScalarProperty Name="mname" ColumnName="mname" />
+                <ScalarProperty Name="year" ColumnName="year" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="People">
+            <EntityTypeMapping TypeName="WaterUsageModel.Person">
+              <MappingFragment StoreEntitySet="Person">
+                <ScalarProperty Name="person_id" ColumnName="person_id" />
+                <ScalarProperty Name="pname" ColumnName="pname" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="wusages">
+            <EntityTypeMapping TypeName="WaterUsageModel.wusage">
+              <MappingFragment StoreEntitySet="wusage">
+                <ScalarProperty Name="person_id" ColumnName="person_id" />
+                <ScalarProperty Name="wid" ColumnName="wid" />
+                <ScalarProperty Name="day" ColumnName="day" />
+                <ScalarProperty Name="month_id" ColumnName="month_id" />
+                <ScalarProperty Name="w_usage" ColumnName="w_usage" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
