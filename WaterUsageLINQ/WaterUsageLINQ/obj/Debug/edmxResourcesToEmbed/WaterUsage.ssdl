@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="WaterUsageModel.Store" Alias="Self" Provider="System.Data.SQLite" ProviderManifestToken="ISO8601" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="WaterUsageModelStoreContainer">
+    <EntitySet Name="month" EntityType="WaterUsageModel.Store.month" store:Type="Tables" />
+    <EntitySet Name="Person" EntityType="WaterUsageModel.Store.Person" store:Type="Tables" />
+    <EntitySet Name="wusage" EntityType="WaterUsageModel.Store.wusage" store:Type="Tables" />
+    <AssociationSet Name="FK_wusage_0_0" Association="WaterUsageModel.Store.FK_wusage_0_0">
+      <End Role="month" EntitySet="month" />
+      <End Role="wusage" EntitySet="wusage" />
+    </AssociationSet>
+    <AssociationSet Name="FK_wusage_1_0" Association="WaterUsageModel.Store.FK_wusage_1_0">
+      <End Role="Person" EntitySet="Person" />
+      <End Role="wusage" EntitySet="wusage" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="month">
+    <Key>
+      <PropertyRef Name="month_id" />
+    </Key>
+    <Property Name="month_id" Type="integer" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="mname" Type="nvarchar" />
+    <Property Name="year" Type="integer" />
+  </EntityType>
+  <EntityType Name="Person">
+    <Key>
+      <PropertyRef Name="person_id" />
+    </Key>
+    <Property Name="person_id" Type="integer" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="pname" Type="nvarchar" />
+  </EntityType>
+  <EntityType Name="wusage">
+    <Key>
+      <PropertyRef Name="wid" />
+    </Key>
+    <Property Name="person_id" Type="integer" Nullable="false" />
+    <Property Name="wid" Type="integer" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="day" Type="integer" />
+    <Property Name="month_id" Type="integer" Nullable="false" />
+    <Property Name="w_usage" Type="integer" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_wusage_0_0">
+    <End Role="month" Type="WaterUsageModel.Store.month" Multiplicity="1" />
+    <End Role="wusage" Type="WaterUsageModel.Store.wusage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="month">
+        <PropertyRef Name="month_id" />
+      </Principal>
+      <Dependent Role="wusage">
+        <PropertyRef Name="month_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_wusage_1_0">
+    <End Role="Person" Type="WaterUsageModel.Store.Person" Multiplicity="1" />
+    <End Role="wusage" Type="WaterUsageModel.Store.wusage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="person_id" />
+      </Principal>
+      <Dependent Role="wusage">
+        <PropertyRef Name="person_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

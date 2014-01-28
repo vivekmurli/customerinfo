@@ -1,0 +1,8 @@
+c:\users\anantha\documents\visual studio 2012\Projects\WaterUsageLINQ\WaterUsageLINQ\bin\Debug\WaterUsageLINQ.exe.config
+c:\users\anantha\documents\visual studio 2012\Projects\WaterUsageLINQ\WaterUsageLINQ\bin\Debug\WaterUsageLINQ.exe
+c:\users\anantha\documents\visual studio 2012\Projects\WaterUsageLINQ\WaterUsageLINQ\bin\Debug\WaterUsageLINQ.pdb
+c:\users\anantha\documents\visual studio 2012\Projects\WaterUsageLINQ\WaterUsageLINQ\bin\Debug\EntityFramework.dll
+c:\users\anantha\documents\visual studio 2012\Projects\WaterUsageLINQ\WaterUsageLINQ\bin\Debug\EntityFramework.xml
+c:\users\anantha\documents\visual studio 2012\Projects\WaterUsageLINQ\WaterUsageLINQ\obj\Debug\WaterUsageLINQ.csprojResolveAssemblyReference.cache
+c:\users\anantha\documents\visual studio 2012\Projects\WaterUsageLINQ\WaterUsageLINQ\obj\Debug\WaterUsageLINQ.exe
+c:\users\anantha\documents\visual studio 2012\Projects\WaterUsageLINQ\WaterUsageLINQ\obj\Debug\WaterUsageLINQ.pdb

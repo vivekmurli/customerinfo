@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="WaterUsageModelStoreContainer" CdmEntityContainer="WaterUsageEntities">
+    <EntitySetMapping Name="months">
+      <EntityTypeMapping TypeName="WaterUsageModel.month">
+        <MappingFragment StoreEntitySet="month">
+          <ScalarProperty Name="month_id" ColumnName="month_id" />
+          <ScalarProperty Name="mname" ColumnName="mname" />
+          <ScalarProperty Name="year" ColumnName="year" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="People">
+      <EntityTypeMapping TypeName="WaterUsageModel.Person">
+        <MappingFragment StoreEntitySet="Person">
+          <ScalarProperty Name="person_id" ColumnName="person_id" />
+          <ScalarProperty Name="pname" ColumnName="pname" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="wusages">
+      <EntityTypeMapping TypeName="WaterUsageModel.wusage">
+        <MappingFragment StoreEntitySet="wusage">
+          <ScalarProperty Name="person_id" ColumnName="person_id" />
+          <ScalarProperty Name="wid" ColumnName="wid" />
+          <ScalarProperty Name="day" ColumnName="day" />
+          <ScalarProperty Name="month_id" ColumnName="month_id" />
+          <ScalarProperty Name="w_usage" ColumnName="w_usage" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
