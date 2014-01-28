@@ -6,3 +6,6 @@ c:\users\anantha\documents\visual studio 2012\Projects\WaterUsageLINQ\WaterUsage
 c:\users\anantha\documents\visual studio 2012\Projects\WaterUsageLINQ\WaterUsageLINQ\obj\Debug\WaterUsageLINQ.csprojResolveAssemblyReference.cache
 c:\users\anantha\documents\visual studio 2012\Projects\WaterUsageLINQ\WaterUsageLINQ\obj\Debug\WaterUsageLINQ.exe
 c:\users\anantha\documents\visual studio 2012\Projects\WaterUsageLINQ\WaterUsageLINQ\obj\Debug\WaterUsageLINQ.pdb
+C:\Users\manu\Documents\GitHub\customerinfo\WaterUsageLINQ\WaterUsageLINQ\bin\Debug\WaterUsageLINQ.exe.config
+C:\Users\manu\Documents\GitHub\customerinfo\WaterUsageLINQ\WaterUsageLINQ\obj\Debug\WaterUsageLINQ.exe
+C:\Users\manu\Documents\GitHub\customerinfo\WaterUsageLINQ\WaterUsageLINQ\obj\Debug\WaterUsageLINQ.pdb

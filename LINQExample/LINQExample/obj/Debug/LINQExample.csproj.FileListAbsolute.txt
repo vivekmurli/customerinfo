@@ -6,3 +6,11 @@ c:\users\anantha\documents\visual studio 2012\Projects\LINQExample\LINQExample\b
 c:\users\anantha\documents\visual studio 2012\Projects\LINQExample\LINQExample\obj\Debug\LINQExample.csprojResolveAssemblyReference.cache
 c:\users\anantha\documents\visual studio 2012\Projects\LINQExample\LINQExample\obj\Debug\LINQExample.exe
 c:\users\anantha\documents\visual studio 2012\Projects\LINQExample\LINQExample\obj\Debug\LINQExample.pdb
+C:\Users\manu\Documents\GitHub\customerinfo\LINQExample\LINQExample\bin\Debug\LINQExample.exe.config
+C:\Users\manu\Documents\GitHub\customerinfo\LINQExample\LINQExample\obj\Debug\LINQExample.exe
+C:\Users\manu\Documents\GitHub\customerinfo\LINQExample\LINQExample\obj\Debug\LINQExample.pdb
+C:\Users\manu\Documents\GitHub\customerinfo\LINQExample\LINQExample\bin\Debug\LINQExample.exe
+C:\Users\manu\Documents\GitHub\customerinfo\LINQExample\LINQExample\bin\Debug\LINQExample.pdb
+C:\Users\manu\Documents\GitHub\customerinfo\LINQExample\LINQExample\bin\Debug\EntityFramework.dll
+C:\Users\manu\Documents\GitHub\customerinfo\LINQExample\LINQExample\bin\Debug\EntityFramework.xml
+C:\Users\manu\Documents\GitHub\customerinfo\LINQExample\LINQExample\obj\Debug\LINQExample.csprojResolveAssemblyReference.cache
