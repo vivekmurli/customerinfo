@@ -1,1 +1,0 @@
-c:\users\anantha\documents\visual studio 2012\Projects\UsageDetails\UsageDetails\bin\Debug\UsageDetails.exe.config
