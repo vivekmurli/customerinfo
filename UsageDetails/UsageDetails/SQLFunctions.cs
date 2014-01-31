@@ -12,10 +12,6 @@ namespace UsageDetails
 
     class SQLFunctions : DBFunctions
     {
-        public SQLFunctions()
-        {
-
-        }
 
         public override List<string> cmbboxMonth()
         {

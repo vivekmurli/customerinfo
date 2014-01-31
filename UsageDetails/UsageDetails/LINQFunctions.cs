@@ -8,10 +8,6 @@ namespace UsageDetails
 {
     class LINQFunctions : DBFunctions
     {
-        public LINQFunctions()
-        {
-
-        }
 
     }
 
