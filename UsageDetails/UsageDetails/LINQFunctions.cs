@@ -9,7 +9,5 @@ namespace UsageDetails
     class LINQFunctions : DBFunctions
     {
 
-
     }
-
 }

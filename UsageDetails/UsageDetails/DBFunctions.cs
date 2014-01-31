@@ -11,7 +11,7 @@ using UsageDetails;
 
 namespace UsageDetails
 {
-    class DBFunctions
+    abstract class DBFunctions
     {
         public virtual List<string> cmbboxMonth()
         {
