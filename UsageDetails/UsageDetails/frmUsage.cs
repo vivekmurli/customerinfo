@@ -61,23 +61,51 @@ namespace UsageDetails
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            string mon = cmbMonth.Text;
-            int year = Convert.ToInt32(cmbYear.Text);
-            int usage = Convert.ToInt32(txtUsage.Text);
-            if (rdbSql.Checked == true)
+            bool str = false;
+
+            if (txtUsage.Text != null)
             {
-                DBFunctions s = new SQLFunctions();
-                frmUsage f = new frmUsage();
-                List<string> name = s.retrieveData(mon, year, usage);
-                dataGridView1.DataSource = name.Select(x => new { Value = x }).ToList();
-                GridView(name);
+                str = false;
+                foreach (char txt in txtUsage.Text)
+                {
+                    if (char.IsLetter(txt))
+                    {
+                        str = true;
+                        break;
+                    }
+                }
             }
             else
             {
-                DBFunctions s = new LINQFunctions();
-                frmUsage f = new frmUsage();
-                List<string> name = s.retrieveData(mon, year, usage);
-                GridView(name);
+                str = true;
+            }
+
+            if (str == true)
+            {
+                errorProvider1.SetError(txtUsage, "Please enter a valid number");
+            }
+            else
+            {
+                errorProvider1.Clear();
+               string mon = cmbMonth.Text;
+                int year = Convert.ToInt32(cmbYear.Text);
+                int usage = Convert.ToInt32(txtUsage.Text);
+                if (rdbSql.Checked == true)
+                {
+                    DBFunctions s = new SQLFunctions();
+                    frmUsage f = new frmUsage();
+                    List<string> name = s.retrieveData(mon, year, usage);
+                    dataGridView1.DataSource = name.Select(x => new { Value = x }).ToList();
+                    GridView(name);
+                }
+                else
+                {
+                    DBFunctions s = new LINQFunctions();
+                    frmUsage f = new frmUsage();
+                    List<string> name = s.retrieveData(mon, year, usage);
+                    GridView(name);
+                }
+                
             }
         }
     }

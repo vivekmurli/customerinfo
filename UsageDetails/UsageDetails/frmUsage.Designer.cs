@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txtUsage = new System.Windows.Forms.TextBox();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.cmbMonth = new System.Windows.Forms.ComboBox();
@@ -39,7 +40,9 @@
             this.lblQuery = new System.Windows.Forms.Label();
             this.rdbLinq = new System.Windows.Forms.RadioButton();
             this.rdbSql = new System.Windows.Forms.RadioButton();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtUsage
@@ -51,9 +54,10 @@
             // 
             // btnSubmit
             // 
+            this.btnSubmit.Font = new System.Drawing.Font("Gill Sans MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmit.Location = new System.Drawing.Point(421, 158);
             this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(121, 23);
+            this.btnSubmit.Size = new System.Drawing.Size(121, 35);
             this.btnSubmit.TabIndex = 1;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = true;
@@ -148,6 +152,10 @@
             this.rdbSql.Text = "SQL";
             this.rdbSql.UseVisualStyleBackColor = true;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // frmUsage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -168,6 +176,7 @@
             this.Text = "Water Usage Details";
             this.Load += new System.EventHandler(this.frmUsage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -186,6 +195,7 @@
         private System.Windows.Forms.Label lblQuery;
         private System.Windows.Forms.RadioButton rdbLinq;
         private System.Windows.Forms.RadioButton rdbSql;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
 
