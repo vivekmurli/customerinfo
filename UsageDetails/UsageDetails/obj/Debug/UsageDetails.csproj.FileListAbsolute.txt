@@ -6,20 +6,17 @@ E:\UsageDetails\UsageDetails\obj\Debug\UsageDetails.Properties.Resources.resourc
 E:\UsageDetails\UsageDetails\obj\Debug\UsageDetails.csproj.GenerateResource.Cache
 F:\MCA\Internship\Manu's Code\UsageDetails\UsageDetails\bin\Debug\UsageDetails.exe.config
 F:\MCA\Internship\GUI Project\UsageDetails\UsageDetails\bin\Debug\UsageDetails.exe.config
-F:\MCA\Internship\GUI Project\UsageDetails\UsageDetails\bin\Debug\x64\SQLite.Interop.dll
-F:\MCA\Internship\GUI Project\UsageDetails\UsageDetails\bin\Debug\x86\SQLite.Interop.dll
 F:\MCA\Internship\GUI Project\UsageDetails\UsageDetails\bin\Debug\UsageDetails.exe
 F:\MCA\Internship\GUI Project\UsageDetails\UsageDetails\bin\Debug\UsageDetails.pdb
 F:\MCA\Internship\GUI Project\UsageDetails\UsageDetails\bin\Debug\EntityFramework.dll
 F:\MCA\Internship\GUI Project\UsageDetails\UsageDetails\bin\Debug\EntityFramework.SqlServer.dll
 F:\MCA\Internship\GUI Project\UsageDetails\UsageDetails\bin\Debug\System.Data.SQLite.dll
-F:\MCA\Internship\GUI Project\UsageDetails\UsageDetails\bin\Debug\System.Data.SQLite.Linq.dll
 F:\MCA\Internship\GUI Project\UsageDetails\UsageDetails\bin\Debug\EntityFramework.xml
 F:\MCA\Internship\GUI Project\UsageDetails\UsageDetails\bin\Debug\EntityFramework.SqlServer.xml
-F:\MCA\Internship\GUI Project\UsageDetails\UsageDetails\bin\Debug\System.Data.SQLite.xml
 F:\MCA\Internship\GUI Project\UsageDetails\UsageDetails\obj\Debug\UsageDetails.csprojResolveAssemblyReference.cache
 F:\MCA\Internship\GUI Project\UsageDetails\UsageDetails\obj\Debug\UsageDetails.frmUsage.resources
 F:\MCA\Internship\GUI Project\UsageDetails\UsageDetails\obj\Debug\UsageDetails.Properties.Resources.resources
 F:\MCA\Internship\GUI Project\UsageDetails\UsageDetails\obj\Debug\UsageDetails.csproj.GenerateResource.Cache
 F:\MCA\Internship\GUI Project\UsageDetails\UsageDetails\obj\Debug\UsageDetails.exe
 F:\MCA\Internship\GUI Project\UsageDetails\UsageDetails\obj\Debug\UsageDetails.pdb
+F:\MCA\Internship\GUI Project\UsageDetails\UsageDetails\bin\Debug\System.Data.SQLite.pdb

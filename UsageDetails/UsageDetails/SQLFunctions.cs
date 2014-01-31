@@ -42,7 +42,7 @@ namespace UsageDetails
             SQLiteDataReader dr = cmd.ExecuteReader();
             while (dr.Read())
             {
-                year.Add(dr.GetInt32(0) + " ");
+                year.Add(Convert.ToString(dr.GetInt32(0)));
             }
             return year;
  
