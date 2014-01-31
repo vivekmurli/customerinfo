@@ -18,3 +18,13 @@ C:\Users\manu\Documents\GitHub\customerinfo\UsagePattern\UsagePattern\bin\Debug\
 C:\Users\manu\Documents\GitHub\customerinfo\UsagePattern\UsagePattern\bin\Debug\System.Data.SQLite.Linq.dll
 C:\Users\manu\Documents\GitHub\customerinfo\UsagePattern\UsagePattern\bin\Debug\System.Data.SQLite.xml
 C:\Users\manu\Documents\GitHub\customerinfo\UsagePattern\UsagePattern\obj\Debug\UsagePattern.csprojResolveAssemblyReference.cache
+C:\Users\hp\Documents\GitHub\customerinfo\UsagePattern\UsagePattern\obj\Debug\UsagePattern.exe
+C:\Users\hp\Documents\GitHub\customerinfo\UsagePattern\UsagePattern\obj\Debug\UsagePattern.pdb
+C:\Users\hp\Documents\GitHub\customerinfo\UsagePattern\UsagePattern\bin\Debug\x64\SQLite.Interop.dll
+C:\Users\hp\Documents\GitHub\customerinfo\UsagePattern\UsagePattern\bin\Debug\x86\SQLite.Interop.dll
+C:\Users\hp\Documents\GitHub\customerinfo\UsagePattern\UsagePattern\bin\Debug\UsagePattern.exe
+C:\Users\hp\Documents\GitHub\customerinfo\UsagePattern\UsagePattern\bin\Debug\UsagePattern.pdb
+C:\Users\hp\Documents\GitHub\customerinfo\UsagePattern\UsagePattern\bin\Debug\System.Data.SQLite.dll
+C:\Users\hp\Documents\GitHub\customerinfo\UsagePattern\UsagePattern\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\hp\Documents\GitHub\customerinfo\UsagePattern\UsagePattern\bin\Debug\System.Data.SQLite.xml
+C:\Users\hp\Documents\GitHub\customerinfo\UsagePattern\UsagePattern\obj\Debug\UsagePattern.csprojResolveAssemblyReference.cache

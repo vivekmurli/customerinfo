@@ -1,0 +1,7 @@
+c:\users\anantha\documents\visual studio 2012\Projects\UsageDetails\UsageDetails\bin\Debug\UsageDetails.exe.config
+E:\UsageDetails\UsageDetails\bin\Debug\UsageDetails.exe.config
+E:\UsageDetails\UsageDetails\obj\Debug\UsageDetails.csprojResolveAssemblyReference.cache
+E:\UsageDetails\UsageDetails\obj\Debug\UsageDetails.frmUsage.resources
+E:\UsageDetails\UsageDetails\obj\Debug\UsageDetails.Properties.Resources.resources
+E:\UsageDetails\UsageDetails\obj\Debug\UsageDetails.csproj.GenerateResource.Cache
+F:\MCA\Internship\Manu's Code\UsageDetails\UsageDetails\bin\Debug\UsageDetails.exe.config

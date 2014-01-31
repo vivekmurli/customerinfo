@@ -18,20 +18,20 @@ namespace UsagePattern
             //createtable.table();
             //createtable.executeTable();
 
-            //InsertQuery insertQuery = new InsertQuery();
+            InsertQuery insertQuery = new InsertQuery();
             
-            //datadao.beginTransaction();
+            datadao.beginTransaction();
             //insertQuery.insertCity();
             //insertQuery.insertmonth();
-            //insertQuery.insertWaterUsage();
-            //insertQuery.insertElectricityUsage();
+            insertQuery.insertWaterUsage();
+            insertQuery.insertElectricityUsage();
            
-            //datadao.commitTransaction();
+            datadao.commitTransaction();
             
-            SelectQuery selectquery = new SelectQuery();
+            /*SelectQuery selectquery = new SelectQuery();
             selectquery.select();
 
-            datadao.reader();
+            datadao.reader();*/
 
             datadao.closeConnection();
         }
