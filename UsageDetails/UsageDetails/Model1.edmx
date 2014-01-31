@@ -1,0 +1,362 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="DemoUsagePatternsModel.Store" Alias="Self" Provider="System.Data.SQLite" ProviderManifestToken="ISO8601" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="DemoUsagePatternsModelStoreContainer">
+          <EntitySet Name="city" EntityType="DemoUsagePatternsModel.Store.city" store:Type="Tables" />
+          <EntitySet Name="electricity_usage" EntityType="DemoUsagePatternsModel.Store.electricity_usage" store:Type="Tables" />
+          <EntitySet Name="month" EntityType="DemoUsagePatternsModel.Store.month" store:Type="Tables" />
+          <EntitySet Name="person" EntityType="DemoUsagePatternsModel.Store.person" store:Type="Tables" />
+          <EntitySet Name="water_usage" EntityType="DemoUsagePatternsModel.Store.water_usage" store:Type="Tables" />
+          <AssociationSet Name="FK_electricity_usage_0_0" Association="DemoUsagePatternsModel.Store.FK_electricity_usage_0_0">
+            <End Role="month" EntitySet="month" />
+            <End Role="electricity_usage" EntitySet="electricity_usage" />
+          </AssociationSet>
+          <AssociationSet Name="FK_electricity_usage_1_0" Association="DemoUsagePatternsModel.Store.FK_electricity_usage_1_0">
+            <End Role="person" EntitySet="person" />
+            <End Role="electricity_usage" EntitySet="electricity_usage" />
+          </AssociationSet>
+          <AssociationSet Name="FK_person_0_0" Association="DemoUsagePatternsModel.Store.FK_person_0_0">
+            <End Role="city" EntitySet="city" />
+            <End Role="person" EntitySet="person" />
+          </AssociationSet>
+          <AssociationSet Name="FK_water_usage_0_0" Association="DemoUsagePatternsModel.Store.FK_water_usage_0_0">
+            <End Role="month" EntitySet="month" />
+            <End Role="water_usage" EntitySet="water_usage" />
+          </AssociationSet>
+          <AssociationSet Name="FK_water_usage_1_0" Association="DemoUsagePatternsModel.Store.FK_water_usage_1_0">
+            <End Role="person" EntitySet="person" />
+            <End Role="water_usage" EntitySet="water_usage" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="city">
+          <Key>
+            <PropertyRef Name="city_id" />
+          </Key>
+          <Property Name="city_id" Type="integer" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="city_name" Type="varchar" Nullable="false" />
+          <Property Name="state" Type="varchar" Nullable="false" />
+        </EntityType>
+        <EntityType Name="electricity_usage">
+          <Key>
+            <PropertyRef Name="e_id" />
+          </Key>
+          <Property Name="e_id" Type="integer" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="person_id" Type="integer" Nullable="false" />
+          <Property Name="day" Type="integer" Nullable="false" />
+          <Property Name="month_id" Type="integer" Nullable="false" />
+          <Property Name="usage" Type="integer" Nullable="false" />
+        </EntityType>
+        <EntityType Name="month">
+          <Key>
+            <PropertyRef Name="month_id" />
+          </Key>
+          <Property Name="month_id" Type="integer" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="month_name" Type="varchar" />
+          <Property Name="year" Type="integer" />
+        </EntityType>
+        <EntityType Name="person">
+          <Key>
+            <PropertyRef Name="person_id" />
+          </Key>
+          <Property Name="person_id" Type="integer" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="person_name" Type="varchar" Nullable="false" />
+          <Property Name="city_id" Type="integer" Nullable="false" />
+        </EntityType>
+        <EntityType Name="water_usage">
+          <Key>
+            <PropertyRef Name="water_id" />
+          </Key>
+          <Property Name="water_id" Type="integer" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="person_id" Type="integer" Nullable="false" />
+          <Property Name="day" Type="integer" Nullable="false" />
+          <Property Name="month_id" Type="integer" Nullable="false" />
+          <Property Name="usage" Type="integer" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_electricity_usage_0_0">
+          <End Role="month" Type="DemoUsagePatternsModel.Store.month" Multiplicity="1" />
+          <End Role="electricity_usage" Type="DemoUsagePatternsModel.Store.electricity_usage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="month">
+              <PropertyRef Name="month_id" />
+            </Principal>
+            <Dependent Role="electricity_usage">
+              <PropertyRef Name="month_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_electricity_usage_1_0">
+          <End Role="person" Type="DemoUsagePatternsModel.Store.person" Multiplicity="1" />
+          <End Role="electricity_usage" Type="DemoUsagePatternsModel.Store.electricity_usage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="person">
+              <PropertyRef Name="person_id" />
+            </Principal>
+            <Dependent Role="electricity_usage">
+              <PropertyRef Name="person_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_person_0_0">
+          <End Role="city" Type="DemoUsagePatternsModel.Store.city" Multiplicity="1" />
+          <End Role="person" Type="DemoUsagePatternsModel.Store.person" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="city">
+              <PropertyRef Name="city_id" />
+            </Principal>
+            <Dependent Role="person">
+              <PropertyRef Name="city_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_water_usage_0_0">
+          <End Role="month" Type="DemoUsagePatternsModel.Store.month" Multiplicity="1" />
+          <End Role="water_usage" Type="DemoUsagePatternsModel.Store.water_usage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="month">
+              <PropertyRef Name="month_id" />
+            </Principal>
+            <Dependent Role="water_usage">
+              <PropertyRef Name="month_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_water_usage_1_0">
+          <End Role="person" Type="DemoUsagePatternsModel.Store.person" Multiplicity="1" />
+          <End Role="water_usage" Type="DemoUsagePatternsModel.Store.water_usage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="person">
+              <PropertyRef Name="person_id" />
+            </Principal>
+            <Dependent Role="water_usage">
+              <PropertyRef Name="person_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DemoUsagePatternsModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="DemoUsagePatternsEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="cities" EntityType="DemoUsagePatternsModel.city" />
+          <EntitySet Name="electricity_usage" EntityType="DemoUsagePatternsModel.electricity_usage" />
+          <EntitySet Name="months" EntityType="DemoUsagePatternsModel.month" />
+          <EntitySet Name="people" EntityType="DemoUsagePatternsModel.person" />
+          <EntitySet Name="water_usage" EntityType="DemoUsagePatternsModel.water_usage" />
+          <AssociationSet Name="FK_person_0_0" Association="DemoUsagePatternsModel.FK_person_0_0">
+            <End Role="city" EntitySet="cities" />
+            <End Role="person" EntitySet="people" />
+          </AssociationSet>
+          <AssociationSet Name="FK_electricity_usage_0_0" Association="DemoUsagePatternsModel.FK_electricity_usage_0_0">
+            <End Role="month" EntitySet="months" />
+            <End Role="electricity_usage" EntitySet="electricity_usage" />
+          </AssociationSet>
+          <AssociationSet Name="FK_electricity_usage_1_0" Association="DemoUsagePatternsModel.FK_electricity_usage_1_0">
+            <End Role="person" EntitySet="people" />
+            <End Role="electricity_usage" EntitySet="electricity_usage" />
+          </AssociationSet>
+          <AssociationSet Name="FK_water_usage_0_0" Association="DemoUsagePatternsModel.FK_water_usage_0_0">
+            <End Role="month" EntitySet="months" />
+            <End Role="water_usage" EntitySet="water_usage" />
+          </AssociationSet>
+          <AssociationSet Name="FK_water_usage_1_0" Association="DemoUsagePatternsModel.FK_water_usage_1_0">
+            <End Role="person" EntitySet="people" />
+            <End Role="water_usage" EntitySet="water_usage" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="city">
+          <Key>
+            <PropertyRef Name="city_id" />
+          </Key>
+          <Property Name="city_id" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="city_name" Type="String" Nullable="false" MaxLength="2147483647" Unicode="false" FixedLength="false" />
+          <Property Name="state" Type="String" Nullable="false" MaxLength="2147483647" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="people" Relationship="DemoUsagePatternsModel.FK_person_0_0" FromRole="city" ToRole="person" />
+        </EntityType>
+        <EntityType Name="electricity_usage">
+          <Key>
+            <PropertyRef Name="e_id" />
+          </Key>
+          <Property Name="e_id" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="person_id" Type="Int64" Nullable="false" />
+          <Property Name="day" Type="Int64" Nullable="false" />
+          <Property Name="month_id" Type="Int64" Nullable="false" />
+          <Property Name="usage" Type="Int64" Nullable="false" />
+          <NavigationProperty Name="month" Relationship="DemoUsagePatternsModel.FK_electricity_usage_0_0" FromRole="electricity_usage" ToRole="month" />
+          <NavigationProperty Name="person" Relationship="DemoUsagePatternsModel.FK_electricity_usage_1_0" FromRole="electricity_usage" ToRole="person" />
+        </EntityType>
+        <EntityType Name="month">
+          <Key>
+            <PropertyRef Name="month_id" />
+          </Key>
+          <Property Name="month_id" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="month_name" Type="String" MaxLength="2147483647" Unicode="false" FixedLength="false" />
+          <Property Name="year" Type="Int64" />
+          <NavigationProperty Name="electricity_usage" Relationship="DemoUsagePatternsModel.FK_electricity_usage_0_0" FromRole="month" ToRole="electricity_usage" />
+          <NavigationProperty Name="water_usage" Relationship="DemoUsagePatternsModel.FK_water_usage_0_0" FromRole="month" ToRole="water_usage" />
+        </EntityType>
+        <EntityType Name="person">
+          <Key>
+            <PropertyRef Name="person_id" />
+          </Key>
+          <Property Name="person_id" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="person_name" Type="String" Nullable="false" MaxLength="2147483647" Unicode="false" FixedLength="false" />
+          <Property Name="city_id" Type="Int64" Nullable="false" />
+          <NavigationProperty Name="city" Relationship="DemoUsagePatternsModel.FK_person_0_0" FromRole="person" ToRole="city" />
+          <NavigationProperty Name="electricity_usage" Relationship="DemoUsagePatternsModel.FK_electricity_usage_1_0" FromRole="person" ToRole="electricity_usage" />
+          <NavigationProperty Name="water_usage" Relationship="DemoUsagePatternsModel.FK_water_usage_1_0" FromRole="person" ToRole="water_usage" />
+        </EntityType>
+        <EntityType Name="water_usage">
+          <Key>
+            <PropertyRef Name="water_id" />
+          </Key>
+          <Property Name="water_id" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="person_id" Type="Int64" Nullable="false" />
+          <Property Name="day" Type="Int64" Nullable="false" />
+          <Property Name="month_id" Type="Int64" Nullable="false" />
+          <Property Name="usage" Type="Int64" Nullable="false" />
+          <NavigationProperty Name="month" Relationship="DemoUsagePatternsModel.FK_water_usage_0_0" FromRole="water_usage" ToRole="month" />
+          <NavigationProperty Name="person" Relationship="DemoUsagePatternsModel.FK_water_usage_1_0" FromRole="water_usage" ToRole="person" />
+        </EntityType>
+        <Association Name="FK_person_0_0">
+          <End Role="city" Type="DemoUsagePatternsModel.city" Multiplicity="1" />
+          <End Role="person" Type="DemoUsagePatternsModel.person" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="city">
+              <PropertyRef Name="city_id" />
+            </Principal>
+            <Dependent Role="person">
+              <PropertyRef Name="city_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_electricity_usage_0_0">
+          <End Role="month" Type="DemoUsagePatternsModel.month" Multiplicity="1" />
+          <End Role="electricity_usage" Type="DemoUsagePatternsModel.electricity_usage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="month">
+              <PropertyRef Name="month_id" />
+            </Principal>
+            <Dependent Role="electricity_usage">
+              <PropertyRef Name="month_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_electricity_usage_1_0">
+          <End Role="person" Type="DemoUsagePatternsModel.person" Multiplicity="1" />
+          <End Role="electricity_usage" Type="DemoUsagePatternsModel.electricity_usage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="person">
+              <PropertyRef Name="person_id" />
+            </Principal>
+            <Dependent Role="electricity_usage">
+              <PropertyRef Name="person_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_water_usage_0_0">
+          <End Role="month" Type="DemoUsagePatternsModel.month" Multiplicity="1" />
+          <End Role="water_usage" Type="DemoUsagePatternsModel.water_usage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="month">
+              <PropertyRef Name="month_id" />
+            </Principal>
+            <Dependent Role="water_usage">
+              <PropertyRef Name="month_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_water_usage_1_0">
+          <End Role="person" Type="DemoUsagePatternsModel.person" Multiplicity="1" />
+          <End Role="water_usage" Type="DemoUsagePatternsModel.water_usage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="person">
+              <PropertyRef Name="person_id" />
+            </Principal>
+            <Dependent Role="water_usage">
+              <PropertyRef Name="person_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DemoUsagePatternsModelStoreContainer" CdmEntityContainer="DemoUsagePatternsEntities">
+          <EntitySetMapping Name="cities">
+            <EntityTypeMapping TypeName="DemoUsagePatternsModel.city">
+              <MappingFragment StoreEntitySet="city">
+                <ScalarProperty Name="city_id" ColumnName="city_id" />
+                <ScalarProperty Name="city_name" ColumnName="city_name" />
+                <ScalarProperty Name="state" ColumnName="state" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="electricity_usage">
+            <EntityTypeMapping TypeName="DemoUsagePatternsModel.electricity_usage">
+              <MappingFragment StoreEntitySet="electricity_usage">
+                <ScalarProperty Name="e_id" ColumnName="e_id" />
+                <ScalarProperty Name="person_id" ColumnName="person_id" />
+                <ScalarProperty Name="day" ColumnName="day" />
+                <ScalarProperty Name="month_id" ColumnName="month_id" />
+                <ScalarProperty Name="usage" ColumnName="usage" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="months">
+            <EntityTypeMapping TypeName="DemoUsagePatternsModel.month">
+              <MappingFragment StoreEntitySet="month">
+                <ScalarProperty Name="month_id" ColumnName="month_id" />
+                <ScalarProperty Name="month_name" ColumnName="month_name" />
+                <ScalarProperty Name="year" ColumnName="year" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="people">
+            <EntityTypeMapping TypeName="DemoUsagePatternsModel.person">
+              <MappingFragment StoreEntitySet="person">
+                <ScalarProperty Name="person_id" ColumnName="person_id" />
+                <ScalarProperty Name="person_name" ColumnName="person_name" />
+                <ScalarProperty Name="city_id" ColumnName="city_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="water_usage">
+            <EntityTypeMapping TypeName="DemoUsagePatternsModel.water_usage">
+              <MappingFragment StoreEntitySet="water_usage">
+                <ScalarProperty Name="water_id" ColumnName="water_id" />
+                <ScalarProperty Name="person_id" ColumnName="person_id" />
+                <ScalarProperty Name="day" ColumnName="day" />
+                <ScalarProperty Name="month_id" ColumnName="month_id" />
+                <ScalarProperty Name="usage" ColumnName="usage" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
