@@ -37,36 +37,42 @@
             this.lblYear = new System.Windows.Forms.Label();
             this.lblUsage = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+<<<<<<< HEAD
             this.lblQuery = new System.Windows.Forms.Label();
             this.rdbLinq = new System.Windows.Forms.RadioButton();
             this.rdbSql = new System.Windows.Forms.RadioButton();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+=======
+>>>>>>> upstream/master
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtUsage
             // 
-            this.txtUsage.Location = new System.Drawing.Point(139, 105);
+            this.txtUsage.Location = new System.Drawing.Point(230, 135);
             this.txtUsage.Name = "txtUsage";
             this.txtUsage.Size = new System.Drawing.Size(121, 20);
             this.txtUsage.TabIndex = 0;
             // 
             // btnSubmit
             // 
+<<<<<<< HEAD
             this.btnSubmit.Font = new System.Drawing.Font("Gill Sans MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmit.Location = new System.Drawing.Point(421, 158);
+=======
+            this.btnSubmit.Location = new System.Drawing.Point(230, 184);
+>>>>>>> upstream/master
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(121, 35);
             this.btnSubmit.TabIndex = 1;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = true;
-            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // cmbMonth
             // 
             this.cmbMonth.FormattingEnabled = true;
-            this.cmbMonth.Location = new System.Drawing.Point(139, 43);
+            this.cmbMonth.Location = new System.Drawing.Point(230, 43);
             this.cmbMonth.Name = "cmbMonth";
             this.cmbMonth.Size = new System.Drawing.Size(121, 21);
             this.cmbMonth.TabIndex = 2;
@@ -75,7 +81,7 @@
             // cmbYear
             // 
             this.cmbYear.FormattingEnabled = true;
-            this.cmbYear.Location = new System.Drawing.Point(421, 45);
+            this.cmbYear.Location = new System.Drawing.Point(230, 85);
             this.cmbYear.Name = "cmbYear";
             this.cmbYear.Size = new System.Drawing.Size(121, 21);
             this.cmbYear.TabIndex = 3;
@@ -83,41 +89,39 @@
             // lblMonth
             // 
             this.lblMonth.AutoSize = true;
-            this.lblMonth.Font = new System.Drawing.Font("Gill Sans MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMonth.Location = new System.Drawing.Point(80, 43);
+            this.lblMonth.Location = new System.Drawing.Point(92, 51);
             this.lblMonth.Name = "lblMonth";
-            this.lblMonth.Size = new System.Drawing.Size(61, 23);
+            this.lblMonth.Size = new System.Drawing.Size(37, 13);
             this.lblMonth.TabIndex = 4;
-            this.lblMonth.Text = "Month :";
+            this.lblMonth.Text = "Month";
             // 
             // lblYear
             // 
             this.lblYear.AutoSize = true;
-            this.lblYear.Font = new System.Drawing.Font("Gill Sans MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblYear.Location = new System.Drawing.Point(359, 41);
+            this.lblYear.Location = new System.Drawing.Point(92, 93);
             this.lblYear.Name = "lblYear";
-            this.lblYear.Size = new System.Drawing.Size(49, 23);
+            this.lblYear.Size = new System.Drawing.Size(29, 13);
             this.lblYear.TabIndex = 5;
-            this.lblYear.Text = "Year :";
+            this.lblYear.Text = "Year";
             // 
             // lblUsage
             // 
             this.lblUsage.AutoSize = true;
-            this.lblUsage.Font = new System.Drawing.Font("Gill Sans MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsage.Location = new System.Drawing.Point(80, 101);
+            this.lblUsage.Location = new System.Drawing.Point(91, 142);
             this.lblUsage.Name = "lblUsage";
-            this.lblUsage.Size = new System.Drawing.Size(57, 23);
+            this.lblUsage.Size = new System.Drawing.Size(38, 13);
             this.lblUsage.TabIndex = 6;
-            this.lblUsage.Text = "Usage :";
+            this.lblUsage.Text = "Usage";
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(84, 213);
+            this.dataGridView1.Location = new System.Drawing.Point(39, 234);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(458, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(436, 150);
             this.dataGridView1.TabIndex = 7;
             // 
+<<<<<<< HEAD
             // lblQuery
             // 
             this.lblQuery.AutoSize = true;
@@ -156,14 +160,13 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+=======
+>>>>>>> upstream/master
             // frmUsage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(624, 415);
-            this.Controls.Add(this.rdbSql);
-            this.Controls.Add(this.rdbLinq);
-            this.Controls.Add(this.lblQuery);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.lblUsage);
             this.Controls.Add(this.lblYear);
@@ -192,10 +195,13 @@
         private System.Windows.Forms.Label lblYear;
         private System.Windows.Forms.Label lblUsage;
         private System.Windows.Forms.DataGridView dataGridView1;
+<<<<<<< HEAD
         private System.Windows.Forms.Label lblQuery;
         private System.Windows.Forms.RadioButton rdbLinq;
         private System.Windows.Forms.RadioButton rdbSql;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+=======
+>>>>>>> upstream/master
     }
 }
 

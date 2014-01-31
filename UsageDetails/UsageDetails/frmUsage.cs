@@ -24,23 +24,8 @@ namespace UsageDetails
 
         private void frmUsage_Load(object sender, EventArgs e)
         {
-            getMonth();
-            getYear();
-            rdbSql.Checked = true;
-        }
 
-        //To Populate ComboBox cmbMonth
-        public void getMonth()
-        {
-            DBFunctions s = new SQLFunctions();
-           List<string> month = s.cmbboxMonth();
-           foreach (var y in month)
-           {
-                cmbMonth.DataSource = month;
-                cmbMonth.DisplayMember = y;
-           }            
-        }
-
+<<<<<<< HEAD
         //To Populate ComboBox cmbYear
         public void getYear()
         {
@@ -107,6 +92,8 @@ namespace UsageDetails
                 }
                 
             }
+=======
+>>>>>>> upstream/master
         }
     }
 }

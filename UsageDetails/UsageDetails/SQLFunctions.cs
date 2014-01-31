@@ -10,7 +10,7 @@ using UsageDetails;
 namespace UsageDetails
 {
 
-    class SQLFunctions : DBFunctions
+    class SQLFunctions1 : DBFunctions
     {
 
         public override List<string> cmbboxMonth()
@@ -53,9 +53,9 @@ namespace UsageDetails
         {
             List<string> lst = new List<string>();
 
-            string query = "SELECT water_usage.person_id, person.person_name, sum(water_usage.usage) usage, month.month_name month, month.year FROM person JOIN water_usage ON person.person_id = water_usage.person_id JOIN month ON water_usage.month_id = month.month_id GROUP BY water_usage.person_id, water_usage.month_id HAVING (month.month_name = '" + mname + "' AND month.year="+ year +" AND sum(water_usage.usage) >"+ usage+")";
+            string query = "SELECT water_usage.person_id, person.person_name, sum(water_usage.usage) usage, month.month_name month, month.year FROM person JOIN water_usage ON person.person_id = water_usage.person_id JOIN month ON water_usage.month_id = month.month_id GROUP BY water_usage.person_id, water_usage.month_id HAVING (month.month_name = '" + mname + "' AND month.year= " +year + " AND sum(water_usage.usage) > "+usage +")";
 
-            using (SQLiteConnection con = new SQLiteConnection(@"Data Source=E:\DemoUsagePatterns.sqlite"))
+            using (SQLiteConnection con = new SQLiteConnection(@"Data Source=E:\db\DemoUsagePattern.sqlite"))
             {
                 SQLiteCommand cmd = new SQLiteCommand(query, con);
                 con.Open();
@@ -64,8 +64,8 @@ namespace UsageDetails
                 while (reader.Read())
                 {
 
-                    lst.Add(reader.GetString(1));
-                   // break;
+                    lst.Add(reader.GetString(2));
+                    
                 }
                 
                 return lst;
