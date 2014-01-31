@@ -24,8 +24,24 @@ namespace UsageDetails
 
         private void frmUsage_Load(object sender, EventArgs e)
         {
+            getMonth();
+            getYear();
+            rdbSql.Checked = true;
+            
+        }
 
-<<<<<<< HEAD
+        //To Populate ComboBox cmbMonth
+        public void getMonth()
+        {
+            DBFunctions s = new SQLFunctions();
+           List<string> month = s.cmbboxMonth();
+           foreach (var y in month)
+           {
+                cmbMonth.DataSource = month;
+                cmbMonth.DisplayMember = y;
+           }            
+        }
+
         //To Populate ComboBox cmbYear
         public void getYear()
         {
@@ -46,6 +62,7 @@ namespace UsageDetails
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
+           
             bool str = false;
 
             if (txtUsage.Text != null)
@@ -92,8 +109,19 @@ namespace UsageDetails
                 }
                 
             }
-=======
->>>>>>> upstream/master
+        }
+
+
+        private void btnBrowse_Click(object sender, EventArgs e)
+        {
+           // dialogBrowse.ShowDialog();
+        }
+
+        private void dialogBrowse_FileOk(object sender, CancelEventArgs e)
+        {
+           /* string path;
+            path = dialogBrowse.FileName;*/
+           // MessageBox.Show(path);
         }
     }
 }
