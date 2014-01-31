@@ -18,6 +18,7 @@ namespace UsagePattern
             //createtable.table();
             //createtable.executeTable();
 
+<<<<<<< HEAD
             //InsertQuery insertQuery = new InsertQuery();
             
             //datadao.beginTransaction();
@@ -32,6 +33,22 @@ namespace UsagePattern
             selectquery.select();
 
             datadao.reader();
+=======
+            InsertQuery insertQuery = new InsertQuery();
+            
+            datadao.beginTransaction();
+            //insertQuery.insertCity();
+            //insertQuery.insertmonth();
+            insertQuery.insertWaterUsage();
+            insertQuery.insertElectricityUsage();
+           
+            datadao.commitTransaction();
+            
+            /*SelectQuery selectquery = new SelectQuery();
+            selectquery.select();
+
+            datadao.reader();*/
+>>>>>>> upstream/master
 
             datadao.closeConnection();
         }

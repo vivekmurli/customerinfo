@@ -35,7 +35,11 @@ namespace UsagePattern
                                   )";
 
             createTableQuery[3] = @"create table if not exists [water_usage](
+<<<<<<< HEAD
                                   [person_id] integer not null,
+=======
+                                  [person_id] integer not null primary key,
+>>>>>>> upstream/master
                                   [day] integer not null,
                                   [month_id] integer not null,
                                   [usage] integer not null,
@@ -44,7 +48,11 @@ namespace UsagePattern
                                   )";
 
             createTableQuery[4] = @"create table if not exists [electricity_usage](
+<<<<<<< HEAD
                                   [person_id] integer not null,
+=======
+                                  [person_id] integer not null primary ke,
+>>>>>>> upstream/master
                                   [day] integer not null,
                                   [month_id] integer not null,
                                   [usage] integer not null,
