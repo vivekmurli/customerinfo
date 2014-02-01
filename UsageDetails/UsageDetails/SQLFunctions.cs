@@ -71,9 +71,6 @@ namespace UsageDetails
                 return lst;
                }
 
-
-            
-
         }
         
     }
