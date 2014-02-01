@@ -20,3 +20,21 @@ F:\MCA\Internship\GUI Project\UsageDetails\UsageDetails\obj\Debug\UsageDetails.c
 F:\MCA\Internship\GUI Project\UsageDetails\UsageDetails\obj\Debug\UsageDetails.exe
 F:\MCA\Internship\GUI Project\UsageDetails\UsageDetails\obj\Debug\UsageDetails.pdb
 F:\MCA\Internship\GUI Project\UsageDetails\UsageDetails\bin\Debug\System.Data.SQLite.pdb
+C:\Users\Anantha\Documents\GitHub\customerinfo\UsageDetails\UsageDetails\bin\Debug\UsageDetails.exe.config
+C:\Users\Anantha\Documents\GitHub\customerinfo\UsageDetails\UsageDetails\obj\Debug\UsageDetails.exe
+C:\Users\Anantha\Documents\GitHub\customerinfo\UsageDetails\UsageDetails\obj\Debug\UsageDetails.pdb
+F:\MCA\Internship\GUI Project\UsageDetails Github\UsageDetails\bin\Debug\UsageDetails.exe.config
+F:\MCA\Internship\GUI Project\UsageDetails Github\UsageDetails\obj\Debug\UsageDetails.exe
+F:\MCA\Internship\GUI Project\UsageDetails Github\UsageDetails\obj\Debug\UsageDetails.pdb
+F:\MCA\Internship\GUI Project\UsageDetails Github\UsageDetails\bin\Debug\UsageDetails.exe
+F:\MCA\Internship\GUI Project\UsageDetails Github\UsageDetails\bin\Debug\UsageDetails.pdb
+F:\MCA\Internship\GUI Project\UsageDetails Github\UsageDetails\bin\Debug\EntityFramework.dll
+F:\MCA\Internship\GUI Project\UsageDetails Github\UsageDetails\bin\Debug\EntityFramework.SqlServer.dll
+F:\MCA\Internship\GUI Project\UsageDetails Github\UsageDetails\bin\Debug\System.Data.SQLite.dll
+F:\MCA\Internship\GUI Project\UsageDetails Github\UsageDetails\bin\Debug\EntityFramework.xml
+F:\MCA\Internship\GUI Project\UsageDetails Github\UsageDetails\bin\Debug\EntityFramework.SqlServer.xml
+F:\MCA\Internship\GUI Project\UsageDetails Github\UsageDetails\bin\Debug\System.Data.SQLite.pdb
+F:\MCA\Internship\GUI Project\UsageDetails Github\UsageDetails\obj\Debug\UsageDetails.csprojResolveAssemblyReference.cache
+F:\MCA\Internship\GUI Project\UsageDetails Github\UsageDetails\obj\Debug\UsageDetails.frmUsage.resources
+F:\MCA\Internship\GUI Project\UsageDetails Github\UsageDetails\obj\Debug\UsageDetails.Properties.Resources.resources
+F:\MCA\Internship\GUI Project\UsageDetails Github\UsageDetails\obj\Debug\UsageDetails.csproj.GenerateResource.Cache

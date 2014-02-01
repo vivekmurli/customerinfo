@@ -38,11 +38,9 @@
   </EntityType>
   <EntityType Name="electricity_usage">
     <Key>
-      <PropertyRef Name="person_id" />
-      <PropertyRef Name="day" />
-      <PropertyRef Name="month_id" />
-      <PropertyRef Name="usage" />
+      <PropertyRef Name="e_id" />
     </Key>
+    <Property Name="e_id" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
     <Property Name="person_id" Type="Int64" Nullable="false" />
     <Property Name="day" Type="Int64" Nullable="false" />
     <Property Name="month_id" Type="Int64" Nullable="false" />
@@ -73,11 +71,9 @@
   </EntityType>
   <EntityType Name="water_usage">
     <Key>
-      <PropertyRef Name="person_id" />
-      <PropertyRef Name="day" />
-      <PropertyRef Name="month_id" />
-      <PropertyRef Name="usage" />
+      <PropertyRef Name="water_id" />
     </Key>
+    <Property Name="water_id" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
     <Property Name="person_id" Type="Int64" Nullable="false" />
     <Property Name="day" Type="Int64" Nullable="false" />
     <Property Name="month_id" Type="Int64" Nullable="false" />
