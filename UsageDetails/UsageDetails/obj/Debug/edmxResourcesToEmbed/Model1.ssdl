@@ -2,24 +2,10 @@
 <Schema Namespace="DemoUsagePatternsModel.Store" Alias="Self" Provider="System.Data.SQLite" ProviderManifestToken="ISO8601" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityContainer Name="DemoUsagePatternsModelStoreContainer">
     <EntitySet Name="city" EntityType="DemoUsagePatternsModel.Store.city" store:Type="Tables" />
-    <EntitySet Name="electricity_usage" EntityType="DemoUsagePatternsModel.Store.electricity_usage" store:Type="Tables" store:Name="electricity_usage">
-      <DefiningQuery>SELECT 
-      [electricity_usage].[person_id] AS [person_id], 
-      [electricity_usage].[day] AS [day], 
-      [electricity_usage].[month_id] AS [month_id], 
-      [electricity_usage].[usage] AS [usage]
-      FROM [electricity_usage] AS [electricity_usage]</DefiningQuery>
-    </EntitySet>
+    <EntitySet Name="electricity_usage" EntityType="DemoUsagePatternsModel.Store.electricity_usage" store:Type="Tables" />
     <EntitySet Name="month" EntityType="DemoUsagePatternsModel.Store.month" store:Type="Tables" />
     <EntitySet Name="person" EntityType="DemoUsagePatternsModel.Store.person" store:Type="Tables" />
-    <EntitySet Name="water_usage" EntityType="DemoUsagePatternsModel.Store.water_usage" store:Type="Tables" store:Name="water_usage">
-      <DefiningQuery>SELECT 
-      [water_usage].[person_id] AS [person_id], 
-      [water_usage].[day] AS [day], 
-      [water_usage].[month_id] AS [month_id], 
-      [water_usage].[usage] AS [usage]
-      FROM [water_usage] AS [water_usage]</DefiningQuery>
-    </EntitySet>
+    <EntitySet Name="water_usage" EntityType="DemoUsagePatternsModel.Store.water_usage" store:Type="Tables" />
     <AssociationSet Name="FK_electricity_usage_0_0" Association="DemoUsagePatternsModel.Store.FK_electricity_usage_0_0">
       <End Role="month" EntitySet="month" />
       <End Role="electricity_usage" EntitySet="electricity_usage" />
@@ -49,16 +35,11 @@
     <Property Name="city_name" Type="varchar" Nullable="false" />
     <Property Name="state" Type="varchar" Nullable="false" />
   </EntityType>
-  <!--Errors Found During Generation:
-      warning 6002: The table/view 'main.electricity_usage' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
-      -->
   <EntityType Name="electricity_usage">
     <Key>
-      <PropertyRef Name="person_id" />
-      <PropertyRef Name="day" />
-      <PropertyRef Name="month_id" />
-      <PropertyRef Name="usage" />
+      <PropertyRef Name="e_id" />
     </Key>
+    <Property Name="e_id" Type="integer" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="person_id" Type="integer" Nullable="false" />
     <Property Name="day" Type="integer" Nullable="false" />
     <Property Name="month_id" Type="integer" Nullable="false" />
@@ -80,16 +61,11 @@
     <Property Name="person_name" Type="varchar" Nullable="false" />
     <Property Name="city_id" Type="integer" Nullable="false" />
   </EntityType>
-  <!--Errors Found During Generation:
-      warning 6002: The table/view 'main.water_usage' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
-      -->
   <EntityType Name="water_usage">
     <Key>
-      <PropertyRef Name="person_id" />
-      <PropertyRef Name="day" />
-      <PropertyRef Name="month_id" />
-      <PropertyRef Name="usage" />
+      <PropertyRef Name="water_id" />
     </Key>
+    <Property Name="water_id" Type="integer" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="person_id" Type="integer" Nullable="false" />
     <Property Name="day" Type="integer" Nullable="false" />
     <Property Name="month_id" Type="integer" Nullable="false" />

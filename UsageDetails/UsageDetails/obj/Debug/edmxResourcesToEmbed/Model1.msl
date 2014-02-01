@@ -13,6 +13,7 @@
     <EntitySetMapping Name="electricity_usage">
       <EntityTypeMapping TypeName="DemoUsagePatternsModel.electricity_usage">
         <MappingFragment StoreEntitySet="electricity_usage">
+          <ScalarProperty Name="e_id" ColumnName="e_id" />
           <ScalarProperty Name="person_id" ColumnName="person_id" />
           <ScalarProperty Name="day" ColumnName="day" />
           <ScalarProperty Name="month_id" ColumnName="month_id" />
@@ -41,6 +42,7 @@
     <EntitySetMapping Name="water_usage">
       <EntityTypeMapping TypeName="DemoUsagePatternsModel.water_usage">
         <MappingFragment StoreEntitySet="water_usage">
+          <ScalarProperty Name="water_id" ColumnName="water_id" />
           <ScalarProperty Name="person_id" ColumnName="person_id" />
           <ScalarProperty Name="day" ColumnName="day" />
           <ScalarProperty Name="month_id" ColumnName="month_id" />

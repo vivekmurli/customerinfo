@@ -12,6 +12,7 @@ namespace UsageDetails
 {
     public partial class frmUsage : Form
     {
+        string path;
         public frmUsage()
         {
             InitializeComponent();
@@ -24,16 +25,14 @@ namespace UsageDetails
 
         private void frmUsage_Load(object sender, EventArgs e)
         {
-            getMonth();
-            getYear();
+            btnSubmit.Enabled = false;
             rdbSql.Checked = true;
-            
         }
 
         //To Populate ComboBox cmbMonth
         public void getMonth()
         {
-            DBFunctions s = new SQLFunctions();
+           DBFunctions s = new SQLFunctions(path);
            List<string> month = s.cmbboxMonth();
            foreach (var y in month)
            {
@@ -45,7 +44,7 @@ namespace UsageDetails
         //To Populate ComboBox cmbYear
         public void getYear()
         {
-            DBFunctions s = new SQLFunctions();
+            DBFunctions s = new SQLFunctions(path);
             List<string> year = s.cmbboxYear();
             foreach (var y in year)
             {
@@ -89,12 +88,12 @@ namespace UsageDetails
             else
             {
                 errorProvider1.Clear();
-               string mon = cmbMonth.Text;
+                string mon = cmbMonth.Text;
                 int year = Convert.ToInt32(cmbYear.Text);
                 int usage = Convert.ToInt32(txtUsage.Text);
                 if (rdbSql.Checked == true)
                 {
-                    DBFunctions s = new SQLFunctions();
+                    DBFunctions s = new SQLFunctions(path);
                     frmUsage f = new frmUsage();
                     List<string> name = s.retrieveData(mon, year, usage);
                     dataGridView1.DataSource = name.Select(x => new { Value = x }).ToList();
@@ -114,14 +113,16 @@ namespace UsageDetails
 
         private void btnBrowse_Click(object sender, EventArgs e)
         {
-           // dialogBrowse.ShowDialog();
+            dialogBrowse.ShowDialog();
         }
 
         private void dialogBrowse_FileOk(object sender, CancelEventArgs e)
-        {
-           /* string path;
-            path = dialogBrowse.FileName;*/
-           // MessageBox.Show(path);
+        {            
+            path = @"Data Source="+dialogBrowse.FileName;
+            getMonth();
+            getYear();
+            btnSubmit.Enabled = true;
+            //MessageBox.Show(path);
         }
     }
 }
