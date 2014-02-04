@@ -5,21 +5,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SQLite;
 using System.Data;
+using System.Diagnostics;
 
 namespace UsageDetails
 {
     class SQLFunctions : DBFunctions
     {
         SQLiteConnection con;
+        Stopwatch stp = new Stopwatch();
 
         public SQLFunctions(string path)
         {
             con = new SQLiteConnection(path);
         }
-
+        
         public override List<string> cmbboxMonth()
         {
-
+            stp.Start();
             List<string> month = new List<string>();
             //SQLiteConnection conn = new SQLiteConnection(@"Data Source=E:\DemoUsagePatterns.sqlite");
             SQLiteCommand cmd = new SQLiteCommand(con);
@@ -28,14 +30,16 @@ namespace UsageDetails
             con.Open();
             SQLiteDataAdapter da = new SQLiteDataAdapter(cmd);
             SQLiteDataReader dr = cmd.ExecuteReader();
+           
             while (dr.Read())
             {
                 month.Add(dr.GetString(0));
             }
             con.Close();
             return month;
+            stp.Stop();
         }
-
+        
         public override List<string> cmbboxYear()
         {
             List<string> year = new List<string>();

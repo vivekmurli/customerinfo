@@ -9,12 +9,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.EntityClient;
 using System.Data.SqlClient;
+using System.Diagnostics;
 
 namespace UsageDetails
 {
     public partial class frmUsage : Form
     {
         string path,linqpath,conStr;
+        
         public frmUsage()
         {
             InitializeComponent();
@@ -38,6 +40,7 @@ namespace UsageDetails
         public void getMonth()
         {
            DBFunctions s = new SQLFunctions(path);
+            //return month
            List<string> month = s.cmbboxMonth();
            foreach (var y in month)
            {
@@ -99,20 +102,27 @@ namespace UsageDetails
                 string mon = cmbMonth.Text;
                 int year = Convert.ToInt32(cmbYear.Text);
                 int usage = Convert.ToInt32(txtUsage.Text);
-
+                Stopwatch stp = new Stopwatch();
                 if (rdbSql.Checked == true)   //To Execute SQL
                 {
+                    
                     DBFunctions s = new SQLFunctions(path);
                     frmUsage f = new frmUsage();
-                    List<string> name = s.retrieveData(mon, year, usage);                    
+                    stp.Start();
+                    List<string> name = s.retrieveData(mon, year, usage);
+                    stp.Stop();
                     GridView(name);
+                    stopwatch2.Text = Convert.ToString(stp.ElapsedMilliseconds)+"ms";
                 }
                 else                         //To Execute LINQ    
                 {
                     DBFunctions s = new LINQFunctions(conStr);
                     frmUsage f = new frmUsage();
+                    stp.Start();
                     List<string> name = s.retrieveData(mon, year, usage);
+                    stp.Stop();
                     GridView(name);
+                    stopwatch1.Text = Convert.ToString(stp.ElapsedMilliseconds)+"ms";
                 }                
             }
         }
@@ -145,6 +155,11 @@ namespace UsageDetails
             txtUsage.Enabled = true;
             cmbMonth.Enabled = true;
             cmbYear.Enabled =  true;
+        }
+
+        private void stopwatch1_Click(object sender, EventArgs e)
+        {
+
         }
 
     }

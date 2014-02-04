@@ -43,6 +43,8 @@
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.btnBrowse = new System.Windows.Forms.Button();
             this.dialogBrowse = new System.Windows.Forms.OpenFileDialog();
+            this.stopwatch1 = new System.Windows.Forms.Label();
+            this.stopwatch2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -174,11 +176,30 @@
             this.dialogBrowse.FileName = "Browse Database";
             this.dialogBrowse.FileOk += new System.ComponentModel.CancelEventHandler(this.dialogBrowse_FileOk);
             // 
+            // stopwatch1
+            // 
+            this.stopwatch1.AutoSize = true;
+            this.stopwatch1.Location = new System.Drawing.Point(197, 277);
+            this.stopwatch1.Name = "stopwatch1";
+            this.stopwatch1.Size = new System.Drawing.Size(0, 13);
+            this.stopwatch1.TabIndex = 12;
+            this.stopwatch1.Click += new System.EventHandler(this.stopwatch1_Click);
+            // 
+            // stopwatch2
+            // 
+            this.stopwatch2.AutoSize = true;
+            this.stopwatch2.Location = new System.Drawing.Point(270, 277);
+            this.stopwatch2.Name = "stopwatch2";
+            this.stopwatch2.Size = new System.Drawing.Size(0, 13);
+            this.stopwatch2.TabIndex = 13;
+            // 
             // frmUsage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(624, 423);
+            this.Controls.Add(this.stopwatch2);
+            this.Controls.Add(this.stopwatch1);
             this.Controls.Add(this.btnBrowse);
             this.Controls.Add(this.rdbSql);
             this.Controls.Add(this.rdbLinq);
@@ -217,6 +238,8 @@
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.Button btnBrowse;
         private System.Windows.Forms.OpenFileDialog dialogBrowse;
+        private System.Windows.Forms.Label stopwatch2;
+        private System.Windows.Forms.Label stopwatch1;
     }
 }
 

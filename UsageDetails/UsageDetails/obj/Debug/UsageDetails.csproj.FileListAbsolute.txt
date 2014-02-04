@@ -11,6 +11,19 @@ C:\Users\Anantha\Documents\Visual Studio 2012\Projects\UsageDetails\UsageDetails
 C:\Users\Anantha\Documents\Visual Studio 2012\Projects\UsageDetails\UsageDetails\obj\Debug\UsageDetails.pdb
 C:\Users\Anantha\Documents\Visual Studio 2012\Projects\UsageDetails\UsageDetails\bin\Debug\EntityFramework.dll
 C:\Users\Anantha\Documents\Visual Studio 2012\Projects\UsageDetails\UsageDetails\bin\Debug\EntityFramework.xml
+C:\Users\manu\Desktop\UsageDetails\UsageDetails\bin\Debug\UsageDetails.exe.config
+C:\Users\manu\Desktop\UsageDetails\UsageDetails\obj\Debug\UsageDetails.exe
+C:\Users\manu\Desktop\UsageDetails\UsageDetails\obj\Debug\UsageDetails.pdb
+C:\Users\manu\Desktop\UsageDetails\UsageDetails\bin\Debug\UsageDetails.exe
+C:\Users\manu\Desktop\UsageDetails\UsageDetails\bin\Debug\UsageDetails.pdb
+C:\Users\manu\Desktop\UsageDetails\UsageDetails\bin\Debug\EntityFramework.dll
+C:\Users\manu\Desktop\UsageDetails\UsageDetails\bin\Debug\System.Data.SQLite.dll
+C:\Users\manu\Desktop\UsageDetails\UsageDetails\bin\Debug\EntityFramework.xml
+C:\Users\manu\Desktop\UsageDetails\UsageDetails\bin\Debug\System.Data.SQLite.pdb
+C:\Users\manu\Desktop\UsageDetails\UsageDetails\obj\Debug\UsageDetails.csprojResolveAssemblyReference.cache
+C:\Users\manu\Desktop\UsageDetails\UsageDetails\obj\Debug\UsageDetails.frmUsage.resources
+C:\Users\manu\Desktop\UsageDetails\UsageDetails\obj\Debug\UsageDetails.Properties.Resources.resources
+C:\Users\manu\Desktop\UsageDetails\UsageDetails\obj\Debug\UsageDetails.csproj.GenerateResource.Cache
 C:\Users\hp\Desktop\UsageDetails\UsageDetails\bin\Debug\UsageDetails.exe.config
 C:\Users\hp\Desktop\UsageDetails\UsageDetails\obj\Debug\UsageDetails.exe
 C:\Users\hp\Desktop\UsageDetails\UsageDetails\obj\Debug\UsageDetails.pdb
