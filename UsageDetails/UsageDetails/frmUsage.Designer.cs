@@ -49,7 +49,7 @@
             // 
             // txtUsage
             // 
-            this.txtUsage.Location = new System.Drawing.Point(139, 105);
+            this.txtUsage.Location = new System.Drawing.Point(197, 143);
             this.txtUsage.Name = "txtUsage";
             this.txtUsage.Size = new System.Drawing.Size(121, 20);
             this.txtUsage.TabIndex = 0;
@@ -57,9 +57,9 @@
             // btnSubmit
             // 
             this.btnSubmit.Font = new System.Drawing.Font("Gill Sans MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSubmit.Location = new System.Drawing.Point(421, 158);
+            this.btnSubmit.Location = new System.Drawing.Point(197, 326);
             this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(121, 35);
+            this.btnSubmit.Size = new System.Drawing.Size(134, 37);
             this.btnSubmit.TabIndex = 1;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = true;
@@ -68,7 +68,7 @@
             // cmbMonth
             // 
             this.cmbMonth.FormattingEnabled = true;
-            this.cmbMonth.Location = new System.Drawing.Point(139, 43);
+            this.cmbMonth.Location = new System.Drawing.Point(197, 85);
             this.cmbMonth.Name = "cmbMonth";
             this.cmbMonth.Size = new System.Drawing.Size(121, 21);
             this.cmbMonth.TabIndex = 2;
@@ -77,7 +77,7 @@
             // cmbYear
             // 
             this.cmbYear.FormattingEnabled = true;
-            this.cmbYear.Location = new System.Drawing.Point(421, 45);
+            this.cmbYear.Location = new System.Drawing.Point(197, 196);
             this.cmbYear.Name = "cmbYear";
             this.cmbYear.Size = new System.Drawing.Size(121, 21);
             this.cmbYear.TabIndex = 3;
@@ -86,7 +86,7 @@
             // 
             this.lblMonth.AutoSize = true;
             this.lblMonth.Font = new System.Drawing.Font("Gill Sans MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMonth.Location = new System.Drawing.Point(80, 43);
+            this.lblMonth.Location = new System.Drawing.Point(77, 85);
             this.lblMonth.Name = "lblMonth";
             this.lblMonth.Size = new System.Drawing.Size(61, 23);
             this.lblMonth.TabIndex = 4;
@@ -96,7 +96,7 @@
             // 
             this.lblYear.AutoSize = true;
             this.lblYear.Font = new System.Drawing.Font("Gill Sans MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblYear.Location = new System.Drawing.Point(359, 41);
+            this.lblYear.Location = new System.Drawing.Point(89, 192);
             this.lblYear.Name = "lblYear";
             this.lblYear.Size = new System.Drawing.Size(49, 23);
             this.lblYear.TabIndex = 5;
@@ -106,7 +106,7 @@
             // 
             this.lblUsage.AutoSize = true;
             this.lblUsage.Font = new System.Drawing.Font("Gill Sans MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsage.Location = new System.Drawing.Point(80, 101);
+            this.lblUsage.Location = new System.Drawing.Point(81, 139);
             this.lblUsage.Name = "lblUsage";
             this.lblUsage.Size = new System.Drawing.Size(57, 23);
             this.lblUsage.TabIndex = 6;
@@ -115,16 +115,16 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(84, 213);
+            this.dataGridView1.Location = new System.Drawing.Point(379, 79);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(458, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(175, 284);
             this.dataGridView1.TabIndex = 7;
             // 
             // lblQuery
             // 
             this.lblQuery.AutoSize = true;
             this.lblQuery.Font = new System.Drawing.Font("Gill Sans MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQuery.Location = new System.Drawing.Point(298, 105);
+            this.lblQuery.Location = new System.Drawing.Point(28, 246);
             this.lblQuery.Name = "lblQuery";
             this.lblQuery.Size = new System.Drawing.Size(110, 23);
             this.lblQuery.TabIndex = 8;
@@ -134,7 +134,7 @@
             // 
             this.rdbLinq.AutoSize = true;
             this.rdbLinq.Font = new System.Drawing.Font("Gill Sans MT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbLinq.Location = new System.Drawing.Point(421, 103);
+            this.rdbLinq.Location = new System.Drawing.Point(197, 248);
             this.rdbLinq.Name = "rdbLinq";
             this.rdbLinq.Size = new System.Drawing.Size(54, 22);
             this.rdbLinq.TabIndex = 9;
@@ -146,7 +146,7 @@
             // 
             this.rdbSql.AutoSize = true;
             this.rdbSql.Font = new System.Drawing.Font("Gill Sans MT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbSql.Location = new System.Drawing.Point(494, 105);
+            this.rdbSql.Location = new System.Drawing.Point(270, 248);
             this.rdbSql.Name = "rdbSql";
             this.rdbSql.Size = new System.Drawing.Size(48, 22);
             this.rdbSql.TabIndex = 10;
@@ -160,11 +160,12 @@
             // 
             // btnBrowse
             // 
-            this.btnBrowse.Location = new System.Drawing.Point(185, 170);
+            this.btnBrowse.Font = new System.Drawing.Font("Gill Sans MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBrowse.Location = new System.Drawing.Point(32, 326);
             this.btnBrowse.Name = "btnBrowse";
-            this.btnBrowse.Size = new System.Drawing.Size(75, 23);
+            this.btnBrowse.Size = new System.Drawing.Size(134, 37);
             this.btnBrowse.TabIndex = 11;
-            this.btnBrowse.Text = "Browse";
+            this.btnBrowse.Text = "Browse Database";
             this.btnBrowse.UseVisualStyleBackColor = true;
             this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
             // 
@@ -177,7 +178,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(624, 415);
+            this.ClientSize = new System.Drawing.Size(624, 423);
             this.Controls.Add(this.btnBrowse);
             this.Controls.Add(this.rdbSql);
             this.Controls.Add(this.rdbLinq);

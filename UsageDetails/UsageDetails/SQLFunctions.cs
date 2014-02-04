@@ -5,16 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SQLite;
 using System.Data;
-using UsageDetails;
 
 namespace UsageDetails
 {
-
     class SQLFunctions : DBFunctions
     {
         SQLiteConnection con;
-
-
 
         public SQLFunctions(string path)
         {
@@ -23,12 +19,12 @@ namespace UsageDetails
 
         public override List<string> cmbboxMonth()
         {
-            
+
             List<string> month = new List<string>();
             //SQLiteConnection conn = new SQLiteConnection(@"Data Source=E:\DemoUsagePatterns.sqlite");
             SQLiteCommand cmd = new SQLiteCommand(con);
-            cmd.CommandText="select DISTINCT month.month_name from month order by month.month_id";
-            
+            cmd.CommandText = "select DISTINCT month.month_name from month order by month.month_id";
+
             con.Open();
             SQLiteDataAdapter da = new SQLiteDataAdapter(cmd);
             SQLiteDataReader dr = cmd.ExecuteReader();
@@ -55,7 +51,7 @@ namespace UsageDetails
             }
             con.Close();
             return year;
- 
+
         }
 
 
@@ -63,7 +59,7 @@ namespace UsageDetails
         {
             List<string> lst = new List<string>();
 
-            string query = "SELECT water_usage.person_id, person.person_name, sum(water_usage.usage) usage, month.month_name month, month.year FROM person JOIN water_usage ON person.person_id = water_usage.person_id JOIN month ON water_usage.month_id = month.month_id GROUP BY water_usage.person_id, water_usage.month_id HAVING (month.month_name = '" + mname + "' AND month.year="+ year +" AND sum(water_usage.usage) >"+ usage+")";
+            string query = "SELECT water_usage.person_id, person.person_name, sum(water_usage.usage) usage, month.month_name month, month.year FROM person JOIN water_usage ON person.person_id = water_usage.person_id JOIN month ON water_usage.month_id = month.month_id GROUP BY water_usage.person_id, water_usage.month_id HAVING (month.month_name = '" + mname + "' AND month.year=" + year + " AND sum(water_usage.usage) >" + usage + ")";
 
             SQLiteCommand cmd = new SQLiteCommand(query, con);
             con.Open();
@@ -76,17 +72,5 @@ namespace UsageDetails
             con.Close();
             return lst;
         }
-        
     }
-    
-}        
-
-
-    
-
-
-
-
-
-
-        
+}

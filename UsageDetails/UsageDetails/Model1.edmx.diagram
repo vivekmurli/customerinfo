@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="fb4b373070ef42a18590bdd1627cebec" Name="Diagram1">
+      <Diagram DiagramId="3fb0f8c4ccf9417280615842c6518ffb" Name="Diagram1">
         <EntityTypeShape EntityType="DemoUsagePatternsModel.city" Width="1.5" PointX="0.75" PointY="3.875" IsExpanded="true" />
         <EntityTypeShape EntityType="DemoUsagePatternsModel.electricity_usage" Width="1.5" PointX="5.25" PointY="3.5" IsExpanded="true" />
         <EntityTypeShape EntityType="DemoUsagePatternsModel.month" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />

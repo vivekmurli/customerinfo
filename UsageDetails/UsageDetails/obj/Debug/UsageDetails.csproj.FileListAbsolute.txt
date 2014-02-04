@@ -1,40 +1,26 @@
 c:\users\anantha\documents\visual studio 2012\Projects\UsageDetails\UsageDetails\bin\Debug\UsageDetails.exe.config
-E:\UsageDetails\UsageDetails\bin\Debug\UsageDetails.exe.config
-E:\UsageDetails\UsageDetails\obj\Debug\UsageDetails.csprojResolveAssemblyReference.cache
-E:\UsageDetails\UsageDetails\obj\Debug\UsageDetails.frmUsage.resources
-E:\UsageDetails\UsageDetails\obj\Debug\UsageDetails.Properties.Resources.resources
-E:\UsageDetails\UsageDetails\obj\Debug\UsageDetails.csproj.GenerateResource.Cache
-F:\MCA\Internship\Manu's Code\UsageDetails\UsageDetails\bin\Debug\UsageDetails.exe.config
-F:\MCA\Internship\GUI Project\UsageDetails\UsageDetails\bin\Debug\UsageDetails.exe.config
-F:\MCA\Internship\GUI Project\UsageDetails\UsageDetails\bin\Debug\UsageDetails.exe
-F:\MCA\Internship\GUI Project\UsageDetails\UsageDetails\bin\Debug\UsageDetails.pdb
-F:\MCA\Internship\GUI Project\UsageDetails\UsageDetails\bin\Debug\EntityFramework.dll
-F:\MCA\Internship\GUI Project\UsageDetails\UsageDetails\bin\Debug\EntityFramework.SqlServer.dll
-F:\MCA\Internship\GUI Project\UsageDetails\UsageDetails\bin\Debug\System.Data.SQLite.dll
-F:\MCA\Internship\GUI Project\UsageDetails\UsageDetails\bin\Debug\EntityFramework.xml
-F:\MCA\Internship\GUI Project\UsageDetails\UsageDetails\bin\Debug\EntityFramework.SqlServer.xml
-F:\MCA\Internship\GUI Project\UsageDetails\UsageDetails\obj\Debug\UsageDetails.csprojResolveAssemblyReference.cache
-F:\MCA\Internship\GUI Project\UsageDetails\UsageDetails\obj\Debug\UsageDetails.frmUsage.resources
-F:\MCA\Internship\GUI Project\UsageDetails\UsageDetails\obj\Debug\UsageDetails.Properties.Resources.resources
-F:\MCA\Internship\GUI Project\UsageDetails\UsageDetails\obj\Debug\UsageDetails.csproj.GenerateResource.Cache
-F:\MCA\Internship\GUI Project\UsageDetails\UsageDetails\obj\Debug\UsageDetails.exe
-F:\MCA\Internship\GUI Project\UsageDetails\UsageDetails\obj\Debug\UsageDetails.pdb
-F:\MCA\Internship\GUI Project\UsageDetails\UsageDetails\bin\Debug\System.Data.SQLite.pdb
-C:\Users\Anantha\Documents\GitHub\customerinfo\UsageDetails\UsageDetails\bin\Debug\UsageDetails.exe.config
-C:\Users\Anantha\Documents\GitHub\customerinfo\UsageDetails\UsageDetails\obj\Debug\UsageDetails.exe
-C:\Users\Anantha\Documents\GitHub\customerinfo\UsageDetails\UsageDetails\obj\Debug\UsageDetails.pdb
-F:\MCA\Internship\GUI Project\UsageDetails Github\UsageDetails\bin\Debug\UsageDetails.exe.config
-F:\MCA\Internship\GUI Project\UsageDetails Github\UsageDetails\obj\Debug\UsageDetails.exe
-F:\MCA\Internship\GUI Project\UsageDetails Github\UsageDetails\obj\Debug\UsageDetails.pdb
-F:\MCA\Internship\GUI Project\UsageDetails Github\UsageDetails\bin\Debug\UsageDetails.exe
-F:\MCA\Internship\GUI Project\UsageDetails Github\UsageDetails\bin\Debug\UsageDetails.pdb
-F:\MCA\Internship\GUI Project\UsageDetails Github\UsageDetails\bin\Debug\EntityFramework.dll
-F:\MCA\Internship\GUI Project\UsageDetails Github\UsageDetails\bin\Debug\EntityFramework.SqlServer.dll
-F:\MCA\Internship\GUI Project\UsageDetails Github\UsageDetails\bin\Debug\System.Data.SQLite.dll
-F:\MCA\Internship\GUI Project\UsageDetails Github\UsageDetails\bin\Debug\EntityFramework.xml
-F:\MCA\Internship\GUI Project\UsageDetails Github\UsageDetails\bin\Debug\EntityFramework.SqlServer.xml
-F:\MCA\Internship\GUI Project\UsageDetails Github\UsageDetails\bin\Debug\System.Data.SQLite.pdb
-F:\MCA\Internship\GUI Project\UsageDetails Github\UsageDetails\obj\Debug\UsageDetails.csprojResolveAssemblyReference.cache
-F:\MCA\Internship\GUI Project\UsageDetails Github\UsageDetails\obj\Debug\UsageDetails.frmUsage.resources
-F:\MCA\Internship\GUI Project\UsageDetails Github\UsageDetails\obj\Debug\UsageDetails.Properties.Resources.resources
-F:\MCA\Internship\GUI Project\UsageDetails Github\UsageDetails\obj\Debug\UsageDetails.csproj.GenerateResource.Cache
+C:\Users\Anantha\Documents\Visual Studio 2012\Projects\UsageDetails\UsageDetails\obj\Debug\UsageDetails.csprojResolveAssemblyReference.cache
+C:\Users\Anantha\Documents\Visual Studio 2012\Projects\UsageDetails\UsageDetails\obj\Debug\UsageDetails.frmUsage.resources
+C:\Users\Anantha\Documents\Visual Studio 2012\Projects\UsageDetails\UsageDetails\obj\Debug\UsageDetails.Properties.Resources.resources
+C:\Users\Anantha\Documents\Visual Studio 2012\Projects\UsageDetails\UsageDetails\obj\Debug\UsageDetails.csproj.GenerateResource.Cache
+C:\Users\Anantha\Documents\Visual Studio 2012\Projects\UsageDetails\UsageDetails\bin\Debug\UsageDetails.exe
+C:\Users\Anantha\Documents\Visual Studio 2012\Projects\UsageDetails\UsageDetails\bin\Debug\UsageDetails.pdb
+C:\Users\Anantha\Documents\Visual Studio 2012\Projects\UsageDetails\UsageDetails\bin\Debug\System.Data.SQLite.dll
+C:\Users\Anantha\Documents\Visual Studio 2012\Projects\UsageDetails\UsageDetails\bin\Debug\System.Data.SQLite.pdb
+C:\Users\Anantha\Documents\Visual Studio 2012\Projects\UsageDetails\UsageDetails\obj\Debug\UsageDetails.exe
+C:\Users\Anantha\Documents\Visual Studio 2012\Projects\UsageDetails\UsageDetails\obj\Debug\UsageDetails.pdb
+C:\Users\Anantha\Documents\Visual Studio 2012\Projects\UsageDetails\UsageDetails\bin\Debug\EntityFramework.dll
+C:\Users\Anantha\Documents\Visual Studio 2012\Projects\UsageDetails\UsageDetails\bin\Debug\EntityFramework.xml
+C:\Users\hp\Desktop\UsageDetails\UsageDetails\bin\Debug\UsageDetails.exe.config
+C:\Users\hp\Desktop\UsageDetails\UsageDetails\obj\Debug\UsageDetails.exe
+C:\Users\hp\Desktop\UsageDetails\UsageDetails\obj\Debug\UsageDetails.pdb
+C:\Users\hp\Desktop\UsageDetails\UsageDetails\bin\Debug\UsageDetails.exe
+C:\Users\hp\Desktop\UsageDetails\UsageDetails\bin\Debug\UsageDetails.pdb
+C:\Users\hp\Desktop\UsageDetails\UsageDetails\bin\Debug\EntityFramework.dll
+C:\Users\hp\Desktop\UsageDetails\UsageDetails\bin\Debug\System.Data.SQLite.dll
+C:\Users\hp\Desktop\UsageDetails\UsageDetails\bin\Debug\EntityFramework.xml
+C:\Users\hp\Desktop\UsageDetails\UsageDetails\bin\Debug\System.Data.SQLite.pdb
+C:\Users\hp\Desktop\UsageDetails\UsageDetails\obj\Debug\UsageDetails.csprojResolveAssemblyReference.cache
+C:\Users\hp\Desktop\UsageDetails\UsageDetails\obj\Debug\UsageDetails.frmUsage.resources
+C:\Users\hp\Desktop\UsageDetails\UsageDetails\obj\Debug\UsageDetails.Properties.Resources.resources
+C:\Users\hp\Desktop\UsageDetails\UsageDetails\obj\Debug\UsageDetails.csproj.GenerateResource.Cache
