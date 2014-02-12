@@ -38,3 +38,15 @@ F:\MCA\Internship\GUI Project\UsageDetails Github\UsageDetails\obj\Debug\UsageDe
 F:\MCA\Internship\GUI Project\UsageDetails Github\UsageDetails\obj\Debug\UsageDetails.frmUsage.resources
 F:\MCA\Internship\GUI Project\UsageDetails Github\UsageDetails\obj\Debug\UsageDetails.Properties.Resources.resources
 F:\MCA\Internship\GUI Project\UsageDetails Github\UsageDetails\obj\Debug\UsageDetails.csproj.GenerateResource.Cache
+C:\Users\Anantha\Documents\GitHub\customerinfo\UsageDetails\UsageDetails\bin\Debug\UsageDetails.exe
+C:\Users\Anantha\Documents\GitHub\customerinfo\UsageDetails\UsageDetails\bin\Debug\UsageDetails.pdb
+C:\Users\Anantha\Documents\GitHub\customerinfo\UsageDetails\UsageDetails\bin\Debug\EntityFramework.dll
+C:\Users\Anantha\Documents\GitHub\customerinfo\UsageDetails\UsageDetails\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Anantha\Documents\GitHub\customerinfo\UsageDetails\UsageDetails\bin\Debug\System.Data.SQLite.dll
+C:\Users\Anantha\Documents\GitHub\customerinfo\UsageDetails\UsageDetails\bin\Debug\EntityFramework.xml
+C:\Users\Anantha\Documents\GitHub\customerinfo\UsageDetails\UsageDetails\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Anantha\Documents\GitHub\customerinfo\UsageDetails\UsageDetails\bin\Debug\System.Data.SQLite.pdb
+C:\Users\Anantha\Documents\GitHub\customerinfo\UsageDetails\UsageDetails\obj\Debug\UsageDetails.csprojResolveAssemblyReference.cache
+C:\Users\Anantha\Documents\GitHub\customerinfo\UsageDetails\UsageDetails\obj\Debug\UsageDetails.frmUsage.resources
+C:\Users\Anantha\Documents\GitHub\customerinfo\UsageDetails\UsageDetails\obj\Debug\UsageDetails.Properties.Resources.resources
+C:\Users\Anantha\Documents\GitHub\customerinfo\UsageDetails\UsageDetails\obj\Debug\UsageDetails.csproj.GenerateResource.Cache

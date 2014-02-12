@@ -1,0 +1,7 @@
+c:\users\anantha\documents\visual studio 2012\Projects\VectorOperations\VectorOperations\bin\Debug\VectorOperations.exe.config
+c:\users\anantha\documents\visual studio 2012\Projects\VectorOperations\VectorOperations\bin\Debug\VectorOperations.exe
+c:\users\anantha\documents\visual studio 2012\Projects\VectorOperations\VectorOperations\bin\Debug\VectorOperations.pdb
+c:\users\anantha\documents\visual studio 2012\Projects\VectorOperations\VectorOperations\bin\Debug\Cudafy.NET.dll
+c:\users\anantha\documents\visual studio 2012\Projects\VectorOperations\VectorOperations\obj\Debug\VectorOperations.csprojResolveAssemblyReference.cache
+c:\users\anantha\documents\visual studio 2012\Projects\VectorOperations\VectorOperations\obj\Debug\VectorOperations.exe
+c:\users\anantha\documents\visual studio 2012\Projects\VectorOperations\VectorOperations\obj\Debug\VectorOperations.pdb

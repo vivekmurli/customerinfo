@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CudafyModule Version="1.26.5081.17893" Name="addition" DebugInfo="false" HasCudaSourceCode="false" HasPTX="false" HasBinary="false">
+  <CudaSourceCode></CudaSourceCode>
+  <PTXMODULES />
+  <BinaryModules />
+  <SourceCodes>
+    <SourceCodeFile ID="b83f5b38-4b3f-4e8e-a654-4ef00e66c4dc" Language="OpenCL" Arch="OpenCL">I2lmIGRlZmluZWQoY2xfa2hyX2ZwNjQpDQojcHJhZ21hIE9QRU5DTCBFWFRFTlNJT04gY2xfa2hyX2ZwNjQ6IGVuYWJsZQ0KI2VsaWYgZGVmaW5lZChjbF9hbWRfZnA2NCkNCiNwcmFnbWEgT1BFTkNMIEVYVEVOU0lPTiBjbF9hbWRfZnA2NDogZW5hYmxlDQojZW5kaWYNCg0KLy8gVmVjdG9yT3BlcmF0aW9ucy5hZGRpdGlvbg0KX19rZXJuZWwgIHZvaWQgYWRkKGdsb2JhbCBpbnQqIGEsIGludCBhTGVuMCwgZ2xvYmFsIGludCogYiwgaW50IGJMZW4wLCBnbG9iYWwgaW50KiBjLCBpbnQgY0xlbjApOw0KDQovLyBWZWN0b3JPcGVyYXRpb25zLmFkZGl0aW9uDQpfX2tlcm5lbCAgdm9pZCBhZGQoZ2xvYmFsIGludCogYSwgaW50IGFMZW4wLCBnbG9iYWwgaW50KiBiLCBpbnQgYkxlbjAsIGdsb2JhbCBpbnQqIGMsIGludCBjTGVuMCkNCnsNCglmb3IgKGludCBpID0gZ2V0X2dyb3VwX2lkKDApICsgZ2V0X2xvY2FsX2lkKDApICogZ2V0X2xvY2FsX3NpemUoMCk7IGkgPCAxMDAwMDA7IGkgKz0gZ2V0X2xvY2FsX3NpemUoMCkgKiBnZXRfbnVtX2dyb3VwcygwKSkNCgl7DQoJCWNbKGkpXSA9IGFbKGkpXSArIGJbKGkpXTsNCgl9DQp9DQo=</SourceCodeFile>
+  </SourceCodes>
+  <Functions>
+    <CudafyKernelMethod Name="add" Type="Global" IsDummy="false" DummyBehaviour="Default">
+      <Type>VectorOperations.addition</Type>
+      <Assembly>VectorOperations, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</Assembly>
+      <AssemblyName>VectorOperations</AssemblyName>
+      <AssemblyPath>C:\Users\Anantha\documents\visual studio 2012\Projects\VectorOperations\VectorOperations\bin\Debug\VectorOperations.exe</AssemblyPath>
+      <Checksum>2505397956</Checksum>
+      <Parameters>
+        <ReturnType>System.Void</ReturnType>
+        <Parameter Type="Cudafy.GThread" Name="thread" Position="0" />
+        <Parameter Type="System.Int32[]" Name="a" Position="1" />
+        <Parameter Type="System.Int32[]" Name="b" Position="2" />
+        <Parameter Type="System.Int32[]" Name="c" Position="3" />
+      </Parameters>
+    </CudafyKernelMethod>
+  </Functions>
+  <Constants />
+  <Types />
+</CudafyModule>
