@@ -6,19 +6,24 @@ using System.Threading.Tasks;
 using Cudafy;
 using Cudafy.Host;
 using Cudafy.Translator;
-
+using System.Diagnostics;
 namespace Vectors
 {
     class dotProduct
     {
+        public const int N = 100000;
 
         public static void execute()
         {
-            int[] vec1 = new int[16];
-            int[] vec2 = new int[16];
-            int nblocks = 2;
-            int nthreads = 3;
+            int[] vec1 = new int[N];
+            int[] vec2 = new int[N];
+            int nblocks = 200;
+            int nthreads = 256;
             int[] dot = new int[nblocks];
+
+            Stopwatch stp = new Stopwatch();
+
+
             for (int i = 0; i < 16; i++)
             {
                 vec1[i] = 1;
@@ -33,14 +38,17 @@ namespace Vectors
             {
                 Console.WriteLine("" + prop.MaxThreadsPerBlock + prop.DeviceId);
             }
-         /*   gpu.LoadModule(km);
+            gpu.LoadModule(km);
 
             int[] dev_vec1 = gpu.CopyToDevice(vec1);
             int[] dev_vec2 = gpu.CopyToDevice(vec2);
             int[] dev_dot = gpu.Allocate<int>(dot);
 
             Console.WriteLine("Started");
+            stp.Start();
             gpu.Launch(nblocks, nthreads).Product(dev_vec1,dev_vec2,dev_dot);
+            stp.Stop();
+            Console.WriteLine("Time : " + stp.ElapsedMilliseconds);
             gpu.CopyFromDevice(dev_dot,dot);
             int sum=0;
             for (int i = 0; i < nblocks; i++)
@@ -48,7 +56,7 @@ namespace Vectors
                 sum = sum + dot[i];
             }
             Console.WriteLine("Dot Product" + sum);
-            Console.Read();*/
+            Console.Read();
         }
 
         [Cudafy]
@@ -58,7 +66,7 @@ namespace Vectors
             int[] cache = thread.AllocateShared<int>("cache", 4);
             int temp = 0;
             int cacheIndex=thread.threadIdx.x;
-            while (tid < 16)
+            while (tid < N)
             {
                 temp = temp + a[tid] * b[tid];
                 tid += thread.blockDim.x * thread.gridDim.x;
