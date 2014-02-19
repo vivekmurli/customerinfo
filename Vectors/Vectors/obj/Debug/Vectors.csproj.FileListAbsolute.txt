@@ -1,0 +1,7 @@
+c:\users\anantha\documents\visual studio 2012\Projects\Vectors\Vectors\bin\Debug\Vectors.exe.config
+c:\users\anantha\documents\visual studio 2012\Projects\Vectors\Vectors\bin\Debug\Vectors.exe
+c:\users\anantha\documents\visual studio 2012\Projects\Vectors\Vectors\bin\Debug\Vectors.pdb
+c:\users\anantha\documents\visual studio 2012\Projects\Vectors\Vectors\bin\Debug\Cudafy.NET.dll
+c:\users\anantha\documents\visual studio 2012\Projects\Vectors\Vectors\obj\Debug\Vectors.csprojResolveAssemblyReference.cache
+c:\users\anantha\documents\visual studio 2012\Projects\Vectors\Vectors\obj\Debug\Vectors.exe
+c:\users\anantha\documents\visual studio 2012\Projects\Vectors\Vectors\obj\Debug\Vectors.pdb

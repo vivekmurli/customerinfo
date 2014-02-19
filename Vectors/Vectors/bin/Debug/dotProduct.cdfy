@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CudafyModule Version="1.26.5081.17893" Name="dotProduct" DebugInfo="false" HasCudaSourceCode="false" HasPTX="false" HasBinary="false">
+  <CudaSourceCode></CudaSourceCode>
+  <PTXMODULES />
+  <BinaryModules />
+  <SourceCodes>
+    <SourceCodeFile ID="2d898d58-8f51-40df-8cf0-b841fddd05ed" Language="OpenCL" Arch="OpenCL">I2lmIGRlZmluZWQoY2xfa2hyX2ZwNjQpDQojcHJhZ21hIE9QRU5DTCBFWFRFTlNJT04gY2xfa2hyX2ZwNjQ6IGVuYWJsZQ0KI2VsaWYgZGVmaW5lZChjbF9hbWRfZnA2NCkNCiNwcmFnbWEgT1BFTkNMIEVYVEVOU0lPTiBjbF9hbWRfZnA2NDogZW5hYmxlDQojZW5kaWYNCg0KLy8gVmVjdG9ycy5kb3RQcm9kdWN0DQpfX2tlcm5lbCAgdm9pZCBQcm9kdWN0KGdsb2JhbCBpbnQqIGEsIGludCBhTGVuMCwgZ2xvYmFsIGludCogYiwgaW50IGJMZW4wLCBnbG9iYWwgaW50KiBjLCBpbnQgY0xlbjApOw0KDQovLyBWZWN0b3JzLmRvdFByb2R1Y3QNCl9fa2VybmVsICB2b2lkIFByb2R1Y3QoZ2xvYmFsIGludCogYSwgaW50IGFMZW4wLCBnbG9iYWwgaW50KiBiLCBpbnQgYkxlbjAsIGdsb2JhbCBpbnQqIGMsIGludCBjTGVuMCkNCnsNCglpbnQgaSA9IGdldF9sb2NhbF9pZCgwKSArIGdldF9ncm91cF9pZCgwKSAqIGdldF9sb2NhbF9zaXplKDApOw0KCV9fbG9jYWwgaW50IGFycmF5WzRdOw0KDQoJaW50IGFycmF5TGVuMCA9IDQ7DQoJaW50IG51bSA9IDA7DQoJaW50IHggPSBnZXRfbG9jYWxfaWQoMCk7DQoJd2hpbGUgKGkgPCAxMDAwMDApDQoJew0KCQludW0gKz0gYVsoaSldICogYlsoaSldOw0KCQlpICs9IGdldF9sb2NhbF9zaXplKDApICogZ2V0X251bV9ncm91cHMoMCk7DQoJfQ0KCWFycmF5WyhnZXRfbG9jYWxfaWQoMCkpXSA9IG51bTsNCgliYXJyaWVyKENMS19MT0NBTF9NRU1fRkVOQ0UpOw0KCWZvciAoaW50IG51bTIgPSBnZXRfbG9jYWxfc2l6ZSgwKSAvIDI7IG51bTIgIT0gMDsgbnVtMiAvPSAyKQ0KCXsNCgkJaWYgKHggPCBudW0yKQ0KCQl7DQoJCQlhcnJheVsoeCldICs9IGFycmF5Wyh4ICsgbnVtMildOw0KCQl9DQoJCWJhcnJpZXIoQ0xLX0xPQ0FMX01FTV9GRU5DRSk7DQoJfQ0KCWlmICh4ID09IDApDQoJew0KCQljWyhnZXRfZ3JvdXBfaWQoMCkpXSA9IGFycmF5WygwKV07DQoJfQ0KfQ0K</SourceCodeFile>
+  </SourceCodes>
+  <Functions>
+    <CudafyKernelMethod Name="Product" Type="Global" IsDummy="false" DummyBehaviour="Default">
+      <Type>Vectors.dotProduct</Type>
+      <Assembly>Vectors, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</Assembly>
+      <AssemblyName>Vectors</AssemblyName>
+      <AssemblyPath>C:\Users\Anantha\Documents\Visual Studio 2012\Projects\Vectors\Vectors\bin\Debug\Vectors.exe</AssemblyPath>
+      <Checksum>1070613607</Checksum>
+      <Parameters>
+        <ReturnType>System.Void</ReturnType>
+        <Parameter Type="Cudafy.GThread" Name="thread" Position="0" />
+        <Parameter Type="System.Int32[]" Name="a" Position="1" />
+        <Parameter Type="System.Int32[]" Name="b" Position="2" />
+        <Parameter Type="System.Int32[]" Name="c" Position="3" />
+      </Parameters>
+    </CudafyKernelMethod>
+  </Functions>
+  <Constants />
+  <Types />
+</CudafyModule>

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CudafyModule Version="1.26.5081.17893" Name="add_type1" DebugInfo="false" HasCudaSourceCode="false" HasPTX="false" HasBinary="false">
+  <CudaSourceCode></CudaSourceCode>
+  <PTXMODULES />
+  <BinaryModules />
+  <SourceCodes>
+    <SourceCodeFile ID="2f17e393-2578-4c3a-b3c9-aedaab38209c" Language="OpenCL" Arch="OpenCL">I2lmIGRlZmluZWQoY2xfa2hyX2ZwNjQpDQojcHJhZ21hIE9QRU5DTCBFWFRFTlNJT04gY2xfa2hyX2ZwNjQ6IGVuYWJsZQ0KI2VsaWYgZGVmaW5lZChjbF9hbWRfZnA2NCkNCiNwcmFnbWEgT1BFTkNMIEVYVEVOU0lPTiBjbF9hbWRfZnA2NDogZW5hYmxlDQojZW5kaWYNCg0KLy8gVmVjdG9ycy5hZGRfdHlwZTENCl9fa2VybmVsICB2b2lkIGFkZChnbG9iYWwgaW50KiBhLCBpbnQgYUxlbjAsIGdsb2JhbCBpbnQqIGIsIGludCBiTGVuMCwgZ2xvYmFsIGludCogYywgaW50IGNMZW4wLCBnbG9iYWwgaW50KiBkLCBpbnQgZExlbjAsIGdsb2JhbCBpbnQqIGUsIGludCBlTGVuMCwgZ2xvYmFsIGludCogc3VtLCBpbnQgc3VtTGVuMCk7DQoNCi8vIFZlY3RvcnMuYWRkX3R5cGUxDQpfX2tlcm5lbCAgdm9pZCBhZGQoZ2xvYmFsIGludCogYSwgaW50IGFMZW4wLCBnbG9iYWwgaW50KiBiLCBpbnQgYkxlbjAsIGdsb2JhbCBpbnQqIGMsIGludCBjTGVuMCwgZ2xvYmFsIGludCogZCwgaW50IGRMZW4wLCBnbG9iYWwgaW50KiBlLCBpbnQgZUxlbjAsIGdsb2JhbCBpbnQqIHN1bSwgaW50IHN1bUxlbjApDQp7DQoJZm9yIChpbnQgaSA9IGdldF9sb2NhbF9pZCgwKSArIGdldF9ncm91cF9pZCgwKSAqIGdldF9sb2NhbF9zaXplKDApOyBpIDwgMTAwOyBpICs9IGdldF9sb2NhbF9zaXplKDApICogZ2V0X251bV9ncm91cHMoMCkpDQoJew0KCQlzdW1bKGkpXSA9IGFbKGkpXSArIGJbKGkpXSArIGNbKGkpXSArIGRbKGkpXSArIGVbKGkpXTsNCgl9DQp9DQo=</SourceCodeFile>
+  </SourceCodes>
+  <Functions>
+    <CudafyKernelMethod Name="add" Type="Global" IsDummy="false" DummyBehaviour="Default">
+      <Type>Vectors.add_type1</Type>
+      <Assembly>Vectors, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</Assembly>
+      <AssemblyName>Vectors</AssemblyName>
+      <AssemblyPath>c:\users\anantha\documents\visual studio 2012\Projects\Vectors\Vectors\bin\Debug\Vectors.exe</AssemblyPath>
+      <Checksum>3265469702</Checksum>
+      <Parameters>
+        <ReturnType>System.Void</ReturnType>
+        <Parameter Type="Cudafy.GThread" Name="thread" Position="0" />
+        <Parameter Type="System.Int32[]" Name="a" Position="1" />
+        <Parameter Type="System.Int32[]" Name="b" Position="2" />
+        <Parameter Type="System.Int32[]" Name="c" Position="3" />
+        <Parameter Type="System.Int32[]" Name="d" Position="4" />
+        <Parameter Type="System.Int32[]" Name="e" Position="5" />
+        <Parameter Type="System.Int32[]" Name="sum" Position="6" />
+      </Parameters>
+    </CudafyKernelMethod>
+  </Functions>
+  <Constants />
+  <Types />
+</CudafyModule>
